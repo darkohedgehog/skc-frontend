@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
-import { BlogType } from '../../../data';
+import { BlogType } from '../../../types';
 
 
 const Blog = () => {

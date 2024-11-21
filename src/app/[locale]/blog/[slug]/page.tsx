@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { BlogSlugType } from "../../../../../data";
+import { BlogSlugType } from "../../../../../types";
 
 
 

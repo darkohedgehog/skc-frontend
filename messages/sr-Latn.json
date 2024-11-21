@@ -4,9 +4,9 @@
       "about": "Go to the about page"
     },
     "LangSwitch": {
-      "title1":"Latinica",
-      "title2":"Ћирилица"
-   },
+      "cyrillic": "Ćirilica",
+      "latin": "Latinica"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

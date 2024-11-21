@@ -4,8 +4,8 @@
       "about": "Ово је опис на ћирилици."
     },
     "LangSwitch": {
-       "title1":"Latinica",
-       "title2":"Ћирилица"
+      "cyrillic": "Ћирилица",
+      "latin": "Латиница"
     },
     "Blog": {
       "no_blogs": "Тренутно нема блогова.",

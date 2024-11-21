@@ -1,9 +1,11 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
-import { BlogType } from '../../../types';
+"use client";
+
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { BlogType } from "../../../types";
+import Pagination from "../pagination/Pagination";
 
 
 const Blog = () => {
@@ -11,11 +13,18 @@ const Blog = () => {
   const locale = useLocale();
   const [blogs, setBlogs] = useState<BlogType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const blogsPerPage = 6; // Broj blogova po stranici
 
-  async function fetchBlogs(locale: string): Promise<{ data: BlogType[] } | null> {
+  async function fetchBlogs(
+    locale: string,
+    page: number,
+    limit: number
+  ): Promise<{ data: BlogType[]; meta: { pagination: { pageCount: number } } } | null> {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&populate=image`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&populate=image&pagination[page]=${page}&pagination[pageSize]=${limit}`
       );
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
@@ -29,9 +38,10 @@ const Blog = () => {
 
   useEffect(() => {
     const getBlogs = async () => {
-      const blogData = await fetchBlogs(locale);
+      const blogData = await fetchBlogs(locale, currentPage, blogsPerPage);
       if (blogData?.data) {
         setBlogs(blogData.data);
+        setTotalPages(blogData.meta.pagination.pageCount); // Postavi ukupno stranica
       } else {
         console.error(`No blogs available for locale: ${locale}`);
       }
@@ -39,7 +49,7 @@ const Blog = () => {
     };
 
     getBlogs();
-  }, [locale]);
+  }, [locale, currentPage]);
 
   if (loading) {
     return <p>{t("loading")}</p>;
@@ -88,6 +98,11 @@ const Blog = () => {
           );
         })}
       </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={(newPage) => setCurrentPage(newPage)}
+      />
     </div>
   );
 };

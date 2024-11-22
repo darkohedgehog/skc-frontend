@@ -7,6 +7,11 @@
       "cyrillic": "Ćirilica",
       "latin": "Latinica"
     },
+    "useTheme": {
+      "title1": "Svjetla",
+      "title2": "Tamna",
+      "title3": "Sistem"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

@@ -6,11 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+export function NavbarWithChildren() {
+  return (
+      <Navbar />
+  );
+}
 
-export default function Navbar ()  {
+const Navbar = () => {
   const navItems = [
     {
-      name: "Services",
+      name: "Naslovna",
       link: "#",
       children: [
         {
@@ -85,7 +90,7 @@ const DesktopNav = ({ navItems }: any) => {
       <Logo />
       <div className="lg:flex flex-row flex-1 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-zinc-600 font-medium hover:text-zinc-800 transition duration-200">
         <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Services">
+          <MenuItem setActive={setActive} active={active} item="Naslovna">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/#">Web Development</HoveredLink>
               <HoveredLink href="/#">Interface Design</HoveredLink>

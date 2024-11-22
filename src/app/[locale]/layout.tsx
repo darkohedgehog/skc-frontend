@@ -4,7 +4,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import type { Metadata } from "next";
 import { ThemeProvider } from 'next-themes';
-import Navbar from '@/components/navbar/Navbar';
+import { NavbarWithChildren } from '@/components/navbar/Navbar';
 
 export const metadata: Metadata = {
     title: "Srpski kulturni centar",
@@ -35,7 +35,7 @@ export default async function LocaleLayout(props: {
              defaultTheme="system"
              enableSystem
              disableTransitionOnChange>
-              <Navbar />
+             <NavbarWithChildren />
           {props.children}
           </ThemeProvider>
         </NextIntlClientProvider>

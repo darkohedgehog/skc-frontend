@@ -28,7 +28,7 @@ export default async function LocaleLayout(props: {
  
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className='transition-colors min-h-screen duration-300 bg-gradient-light dark:bg-gradient-dark'>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
              attribute="class"

@@ -30,7 +30,7 @@ const LangSwitch = () => {
         checked={isCyrillic}
         onCheckedChange={handleLanguageToggle}
       />
-      <IoLanguageSharp className="text-xl text-gray-600 dark:text-gray-300" />
+      <IoLanguageSharp className="text-xl text-gray-600 dark:text-accentDark" />
     </div>
   );
 };

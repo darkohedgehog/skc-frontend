@@ -13,12 +13,17 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 export function NavbarWithChildren() {
-  return <Navbar />;
+  return (
+    <div className="sticky top-0 z-50">
+      <Navbar />
+    </div>
+  );
 }
+
 
 const Navbar = () => {
   const pathname = usePathname();
-  const t = useTranslations("NavBar"); // Ključ mora odgovarati vašem JSON fajlu sa prevodima
+  const t = useTranslations("NavBar");
   const pathSegments = pathname.split("/");
   const currentLocale = pathSegments[1] || "sr-Latn";
 
@@ -59,7 +64,7 @@ const DesktopNav = ({ navItems }: any) => {
   return (
     <motion.div
       className={cn(
-        "hidden lg:flex flex-row self-start bg-white dark:bg-neutral-950 items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
+        "hidden lg:flex flex-row self-start bg-card-bg-light dark:bg-card-bg-dark items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
         "sticky top-40 inset-x-0"
       )}
     >
@@ -80,13 +85,13 @@ const DesktopNav = ({ navItems }: any) => {
                 title={t("title10")}
                 href="/biblioteka"
                 src="https://assets.aceternity.com/demos/algochurn.webp"
-                description={t("pargraph1")}
+                description={t("paragraph1")}
               />
               <ProductItem
                 title={t("title11")}
                 href="/arhivska-gradja"
                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description={t("pargraph2")}
+                description={t("paragraph2")}
               />
             </div>
           </MenuItem>

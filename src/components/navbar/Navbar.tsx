@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import Logo from "../logo/Logo";
+import LangSwitch from "../header/LangSwitch";
+import { ModeToggle } from "../hooks/useThemeSwitch";
 
 export function NavbarWithChildren() {
   return (
@@ -107,9 +110,10 @@ const DesktopNav = ({ navItems }: any) => {
           </Link>
         </Menu>
       </div>
-      <button className="hidden md:block px-8 py-2 text-sm font-bold rounded-full bg-black dark:bg-white dark:text-black  text-white shadow-[0px_-2px_0px_0px_rgba(255,255,255,0.4)_inset]">
-        Book a call
-      </button>
+      <div className="flex items-center justify-center gap-2">
+        <LangSwitch />
+        <ModeToggle />
+      </div>
     </motion.div>
   );
 };
@@ -213,22 +217,6 @@ const MobileChildNavItems = ({ navItem }: { navItem: any }) => {
   );
 };
 
-const Logo = () => {
-  return (
-    <Link
-      href="/"
-      className="font-normal flex space-x-2 items-center text-sm mr-4  text-black px-2 py-1  relative z-20"
-    >
-      <Image
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
-        width={30}
-        height={30}
-      />
-      <span className="font-medium text-black dark:text-white">DevStudio</span>
-    </Link>
-  );
-};
 
 const transition = {
   type: "spring",

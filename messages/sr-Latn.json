@@ -12,6 +12,21 @@
       "title2": "Tamna",
       "title3": "Sistem"
     },
+    "NavBar": {
+        "title1": "Naslovna",
+        "title2": "O nama",
+        "title3": "Direktor",
+        "title4": "Statut",
+        "title5": "Izveštaji",
+        "title6": "Kultura",
+        "title7": "Biblioteka",
+        "title8": "Izveštaji",
+        "title9": "Kontakt",
+        "title10": "Biblioteka Zaharije Orfelin",
+        "title11": "Arhivska građa",
+        "pargraph1": "Sadrži više od 20.000 naslova",
+        "pargraph2": "Istorijski dokumenti obrađeni u digitalnom formatu"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

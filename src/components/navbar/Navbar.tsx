@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,55 +9,39 @@ import React, { useState } from "react";
 import Logo from "../logo/Logo";
 import LangSwitch from "../header/LangSwitch";
 import { ModeToggle } from "../hooks/useThemeSwitch";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export function NavbarWithChildren() {
-  return (
-      <Navbar />
-  );
+  return <Navbar />;
 }
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const t = useTranslations("NavBar"); // Ključ mora odgovarati vašem JSON fajlu sa prevodima
+  const pathSegments = pathname.split("/");
+  const currentLocale = pathSegments[1] || "sr-Latn";
+
   const navItems = [
     {
-      name: "Naslovna",
+      name: t("title1"),
       link: "/",
       children: [
-        {
-          name: "O nama",
-          link: "/o-nama",
-        },
-        {
-          name: "Direktor",
-          link: "/direktor",
-        },
-        {
-          name: "Statut",
-          link: "/statut",
-        },
-        {
-          name: "Izveštaji",
-          link: "/izvestaji",
-        },
+        { name: t("title2"), link: "/o-nama" },
+        { name: t("title3"), link: "/direktor" },
+        { name: t("title4"), link: "/statut" },
+        { name: t("title5"), link: "/izvestaji" },
       ],
     },
     {
-      name: "Kultura",
+      name: t("title6"),
       link: "/kultura",
       children: [
-        {
-          name: "Biblioteka",
-          link: "/biblioteka",
-        },
-        {
-          name: "Arhivska građa",
-          link: "/arhivska-gradja",
-        },
+        { name: t("title7"), link: "/biblioteka" },
+        { name: t("title11"), link: "/arhivska-gradja" },
       ],
     },
-    {
-      name: "Kontakt",
-      link: "/kontakt",
-    },
+    { name: t("title9"), link: "/kontakt" },
   ];
 
   return (
@@ -69,6 +54,8 @@ const Navbar = () => {
 
 const DesktopNav = ({ navItems }: any) => {
   const [active, setActive] = useState<string | null>(null);
+  const t = useTranslations("NavBar");
+
   return (
     <motion.div
       className={cn(
@@ -79,44 +66,47 @@ const DesktopNav = ({ navItems }: any) => {
       <Logo />
       <div className="lg:flex flex-row flex-1 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-zinc-600 font-medium hover:text-zinc-800 transition duration-200">
         <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Naslovna">
+          <MenuItem setActive={setActive} active={active} item={t("title1")}>
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/o-nama">O nama</HoveredLink>
-              <HoveredLink href="/direktor">Direktor</HoveredLink>
-              <HoveredLink href="/statut">Statut</HoveredLink>
-              <HoveredLink href="/izvestaji">Izveštaji</HoveredLink>
+              <HoveredLink href="/o-nama">{t("title2")}</HoveredLink>
+              <HoveredLink href="/direktor">{t("title3")}</HoveredLink>
+              <HoveredLink href="/statut">{t("title4")}</HoveredLink>
+              <HoveredLink href="/izvestaji">{t("title5")}</HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Kultura">
-            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <MenuItem setActive={setActive} active={active} item={t("title6")}>
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Biblioteka Zaharija Orfelin"
+                title={t("title10")}
                 href="/biblioteka"
                 src="https://assets.aceternity.com/demos/algochurn.webp"
-                description="Sadrži više od 20.000 naslova"
+                description={t("pargraph1")}
               />
               <ProductItem
-                title="Arhivska građa"
+                title={t("title11")}
                 href="/arhivska-gradja"
                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description="Istorijski dokumenti obrađeni u digitalnom formatu"
+                description={t("pargraph2")}
               />
             </div>
           </MenuItem>
           <Link
-          href="/kontakt"
-          className="text-zinc-100 font-medium hover:text-zinc-800 transition duration-200">
-          Kontakt
+            href="/kontakt"
+            className="text-zinc-100 font-medium hover:text-zinc-800 transition duration-200"
+          >
+            {t("title9")}
           </Link>
         </Menu>
       </div>
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-3">
         <LangSwitch />
         <ModeToggle />
       </div>
     </motion.div>
   );
 };
+
+
 
 const MobileNav = ({ navItems }: any) => {
   const [open, setOpen] = useState(false);
@@ -171,9 +161,10 @@ const MobileNav = ({ navItems }: any) => {
                   )}
                 </div>
               ))}
-              <button className="px-8 py-2 w-full rounded-lg bg-black dark:bg-white dark:text-black font-medium text-white shadow-[0px_-2px_0px_0px_rgba(255,255,255,0.4)_inset]">
-                Book a call
-              </button>
+              <div className="flex items-center justify-center gap-3">
+             <LangSwitch />
+             <ModeToggle />
+             </div>
             </motion.div>
           )}
         </AnimatePresence>

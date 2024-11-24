@@ -16,57 +16,43 @@ const Navbar = () => {
   const navItems = [
     {
       name: "Naslovna",
-      link: "#",
+      link: "/",
       children: [
         {
-          name: "Web Development",
-          link: "#",
+          name: "O nama",
+          link: "/o-nama",
         },
         {
-          name: "Interface Design",
-          link: "#",
+          name: "Direktor",
+          link: "/direktor",
         },
         {
-          name: "Search Engine Optimization",
-          link: "#",
+          name: "Statut",
+          link: "/statut",
         },
         {
-          name: "Branding",
-          link: "#",
+          name: "Izveštaji",
+          link: "/izvestaji",
         },
       ],
     },
     {
-      name: "Products",
-      link: "#",
+      name: "Kultura",
+      link: "/kultura",
       children: [
         {
-          name: "Algochurn",
-          link: "#",
+          name: "Biblioteka",
+          link: "/biblioteka",
         },
         {
-          name: "Tailwind Master Kit",
-          link: "#",
+          name: "Arhivska građa",
+          link: "/arhivska-gradja",
         },
       ],
     },
     {
-      name: "Pricing",
-      link: "#",
-      children: [
-        {
-          name: "Hobby",
-          link: "#",
-        },
-        {
-          name: "Individual",
-          link: "#",
-        },
-        {
-          name: "Team",
-          link: "#",
-        },
-      ],
+      name: "Kontakt",
+      link: "/kontakt",
     },
   ];
 
@@ -92,36 +78,33 @@ const DesktopNav = ({ navItems }: any) => {
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item="Naslovna">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/#">Web Development</HoveredLink>
-              <HoveredLink href="/#">Interface Design</HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
+              <HoveredLink href="/o-nama">O nama</HoveredLink>
+              <HoveredLink href="/direktor">Direktor</HoveredLink>
+              <HoveredLink href="/statut">Statut</HoveredLink>
+              <HoveredLink href="/izvestaji">Izveštaji</HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Products">
+          <MenuItem setActive={setActive} active={active} item="Kultura">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
+                title="Biblioteka Zaharija Orfelin"
+                href="/biblioteka"
                 src="https://assets.aceternity.com/demos/algochurn.webp"
-                description="Prepare for tech interviews like never before."
+                description="Sadrži više od 20.000 naslova"
               />
               <ProductItem
-                title="Tailwind Master Kit"
-                href="https://tailwindmasterkit.com"
+                title="Arhivska građa"
+                href="/arhivska-gradja"
                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description="Production ready Tailwind css components for your next project"
+                description="Istorijski dokumenti obrađeni u digitalnom formatu"
               />
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Pricing">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/hobby">Hobby</HoveredLink>
-              <HoveredLink href="/individual">Individual</HoveredLink>
-              <HoveredLink href="/team">Team</HoveredLink>
-              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-            </div>
-          </MenuItem>
+          <Link
+          href="/kontakt"
+          className="text-zinc-100 font-medium hover:text-zinc-800 transition duration-200">
+          Kontakt
+          </Link>
         </Menu>
       </div>
       <button className="hidden md:block px-8 py-2 text-sm font-bold rounded-full bg-black dark:bg-white dark:text-black  text-white shadow-[0px_-2px_0px_0px_rgba(255,255,255,0.4)_inset]">

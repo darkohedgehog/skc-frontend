@@ -35,8 +35,14 @@ export default async function LocaleLayout(props: {
              defaultTheme="system"
              enableSystem
              disableTransitionOnChange>
+               {/* Gradient kao pozadina */}
+            <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none bg-gradient-light dark:bg-gradient-dark">
+            </div>
+               {/* Sadržaj aplikacije */}
+            <div className='relative z-10'>
              <NavbarWithChildren />
-          {props.children}
+               {props.children}
+           </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

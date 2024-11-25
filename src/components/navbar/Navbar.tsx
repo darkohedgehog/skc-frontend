@@ -36,6 +36,7 @@ const Navbar = () => {
         { name: t("title3"), link: "/direktor" },
         { name: t("title4"), link: "/statut" },
         { name: t("title5"), link: "/izvestaji" },
+        { name: t("title12"), link: "/blog" },
       ],
     },
     {
@@ -64,7 +65,7 @@ const DesktopNav = ({ navItems }: any) => {
   return (
     <motion.div
       className={cn(
-        "hidden lg:flex flex-row self-start bg-card-bg-light dark:bg-card-bg-dark items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
+        "hidden lg:flex flex-row self-start bg-card-bg-dark items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
         "sticky top-40 inset-x-0"
       )}
     >
@@ -77,6 +78,7 @@ const DesktopNav = ({ navItems }: any) => {
               <HoveredLink href="/direktor">{t("title3")}</HoveredLink>
               <HoveredLink href="/statut">{t("title4")}</HoveredLink>
               <HoveredLink href="/izvestaji">{t("title5")}</HoveredLink>
+              <HoveredLink href="/blog">{t("title12")}</HoveredLink>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item={t("title6")}>

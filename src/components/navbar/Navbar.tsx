@@ -14,7 +14,7 @@ import { useTranslations } from "next-intl";
 
 export function NavbarWithChildren() {
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-1 z-50">
       <Navbar />
     </div>
   );
@@ -65,7 +65,7 @@ const DesktopNav = ({ navItems }: any) => {
   return (
     <motion.div
       className={cn(
-        "hidden lg:flex flex-row self-start bg-card-bg-dark items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
+        "hidden lg:flex flex-row self-start dark:bg-card-bg-dark bg-[#c0c0c0] items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full",
         "sticky top-40 inset-x-0"
       )}
     >
@@ -125,18 +125,18 @@ const MobileNav = ({ navItems }: any) => {
           borderRadius: open ? "4px" : "2rem",
         }}
         key={String(open)}
-        className="flex relative flex-col lg:hidden w-full justify-between items-center bg-white dark:bg-neutral-950  max-w-[calc(100vw-2rem)] mx-auto px-4 py-2"
+        className="flex relative flex-col lg:hidden w-full justify-between items-center bg-white dark:bg-card-bg-dark  max-w-[calc(100vw-2rem)] mx-auto px-4 py-2"
       >
         <div className="flex flex-row justify-between items-center w-full">
           <Logo />
           {open ? (
             <IconX
-              className="text-black dark:text-white"
+              className="text-black dark:text-accentDark"
               onClick={() => setOpen(!open)}
             />
           ) : (
             <IconMenu2
-              className="text-black dark:text-white"
+              className="text-black dark:text-accentDark"
               onClick={() => setOpen(!open)}
             />
           )}
@@ -159,7 +159,7 @@ const MobileNav = ({ navItems }: any) => {
                   ) : (
                     <Link
                       href={navItem.link}
-                      className="relative text-neutral-600 dark:text-neutral-300"
+                      className="relative text-neutral-600 dark:text-accentDark"
                     >
                       <motion.span className="block">
                         {navItem.name}
@@ -186,7 +186,7 @@ const MobileChildNavItems = ({ navItem }: { navItem: any }) => {
     <motion.div className="overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="relative text-neutral-600 dark:text-neutral-300 flex w-full justify-between"
+        className="relative text-accent dark:text-accentDark flex w-full justify-between"
       >
         <motion.span className="block">{navItem.name}</motion.span>
         <IconChevronDown className="text-neutral-700 dark:text-neutral-300" />
@@ -203,7 +203,7 @@ const MobileChildNavItems = ({ navItem }: { navItem: any }) => {
               <Link
                 key={`child-${childIdx}`}
                 href={child.link}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-darkblue dark:text-darkpurple"
               >
                 <motion.span className="block">{child.name}</motion.span>
               </Link>
@@ -284,7 +284,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full bg-card-bg-dark flex justify-center space-x-4 px-4 py-3 border border-accentDark"
+      className="relative rounded-full bg-[#dcdcdc] dark:bg-card-bg-dark flex justify-center space-x-4 px-4 py-3 border border-accentDark"
     >
       {children}
     </nav>
@@ -309,13 +309,14 @@ export const ProductItem = ({
         width={140}
         height={70}
         alt={title}
+        priority={false}
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-base font-normal mb-1 text-black dark:text-white">
+        <h4 className="text-base font-normal mb-1 text-accent dark:text-accentDark">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-darkblue text-sm max-w-[10rem] dark:text-darkpurple">
           {description}
         </p>
       </div>
@@ -327,7 +328,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className="text-gray dark:text-accentDark hover:text-darkblue w-44"
     >
       {children}
     </Link>

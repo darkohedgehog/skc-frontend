@@ -55,12 +55,12 @@ const BlogSection = () => {
     <section className="my-16">
       <div className="container px-6 py-10 mx-auto">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-semibold text-purple uppercase lg:text-3xl dark:text-accentblue">
+          <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-3xl dark:text-accentDark">
             Najnovije vijesti
           </h1>
         </div>
 
-        <hr className="my-8 border-gray-200 dark:border-gray-700" />
+        <hr className="my-8 border-gray" />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           {blogs.map((blog) => {
@@ -73,7 +73,7 @@ const BlogSection = () => {
               <div key={blog.id}>
                 {imageUrl && (
                   <Image
-                    className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                    className="object-cover object-center w-full h-64 rounded-xl shadow-md shadow-gray lg:h-80"
                     src={`${process.env.NEXT_PUBLIC_BASE_URL}${imageUrl}`}
                     alt={blog.title}
                     width={500}
@@ -82,14 +82,14 @@ const BlogSection = () => {
                   />
                 )}
                 <div className="mt-8">
-                  <span className="text-blue-500 uppercase">{blog.title}</span>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                  <span className="dark:text-darkpurple text-blue-500 uppercase">{blog.title}</span>
+                  <p className="mt-2 text-gray dark:text-gray-400">
                     {blog.description}
                   </p>
                   <div className="flex items-center justify-start mt-4">
                     <Link
                       href={`/${locale}/blog/${blog.slug}`}
-                      className="inline-block text-blue-500 underline hover:text-blue-400"
+                      className="inline-block text-blue-500 dark:text-accentDark underline hover:text-blue-400 hover:dark:text-accent"
                     >
                       Više
                     </Link>

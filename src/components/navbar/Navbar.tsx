@@ -70,7 +70,7 @@ const DesktopNav = ({ navItems }: any) => {
       )}
     >
       <Logo />
-      <div className="lg:flex flex-row flex-1 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-zinc-600 font-medium hover:text-zinc-800 transition duration-200">
+      <div className="lg:flex flex-row flex-1 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-accent dark:text-accentDark font-medium hover:text-zinc-800 transition duration-200">
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item={t("title1")}>
             <div className="flex flex-col space-y-4 text-sm">
@@ -99,7 +99,7 @@ const DesktopNav = ({ navItems }: any) => {
           </MenuItem>
           <Link
             href="/kontakt"
-            className="text-zinc-100 font-medium hover:text-zinc-800 transition duration-200"
+            className="text-accent dark:text-accentDark font-medium hover:text-zinc-800 transition duration-200"
           >
             {t("title9")}
           </Link>
@@ -237,10 +237,10 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-neutral-700 dark:text-neutral-300 hover:opacity-[0.9] "
+        className="cursor-pointer text-accent dark:text-accentDark hover:opacity-[0.9]"
       >
         {item}
       </motion.p>
@@ -284,7 +284,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full dark:bg-neutral-950  bg-white flex justify-center space-x-4 px-4 py-3 "
+      className="relative rounded-full bg-card-bg-dark flex justify-center space-x-4 px-4 py-3 border border-accentDark"
     >
       {children}
     </nav>

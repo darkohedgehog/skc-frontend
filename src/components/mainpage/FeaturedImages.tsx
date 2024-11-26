@@ -193,7 +193,7 @@ export const FeaturedImages = ({
             textClassName
           )}
         >
-          Trusted by 27,000+ creators
+          Zadovoljstvo naših posetitelja
         </p>
       </div>
     );

@@ -13,7 +13,46 @@ import {
 
 import { BsStarFill } from "react-icons/bs";
 import { cn } from "@/lib/utils";
-import { testimonials } from "./data";
+
+
+ const testimonials = [
+    {
+      name: "Biblioteka",
+      designation: "Zaharija Orfelin",
+      image:
+        "/assets/knjiga.webp",
+    },
+    {
+      name: "Izložbe",
+      designation: "srpskih umetnika",
+      image:
+        "/assets/izlozba.webp",
+    },
+    {
+      name: "Muzika",
+      designation: "čuvar tradicije",
+      image:
+        "/assets/muzika.webp",
+    },
+    {
+      name: "Pismo",
+      designation: "blago za pokoljenja",
+      image:
+        "/assets/pisanje.webp",
+    },
+    {
+      name: "Predavanja",
+      designation: "o kulturi",
+      image:
+        "/assets/predavanja.webp",
+    },
+    {
+      name: "Radionice",
+      designation: "za sve uzraste",
+      image:
+        "/assets/radionica.webp",
+    },
+  ];
 
 export const FeaturedImages = ({
     textClassName,

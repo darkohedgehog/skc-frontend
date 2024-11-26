@@ -28,6 +28,13 @@
         "paragraph1": "Sadrži više od 20.000 naslova",
         "paragraph2": "Istorijski dokumenti obrađeni u digitalnom formatu"
     },
+    "HeroSection": {
+      "title1": "Ustanova u oblasti kulture",
+      "span": "Srpski kulturni centar",
+      "paragraph": "Čuvamo i unapređujemo tradicionalne, kulturne i umetničke izraze srpske nacionalne manjine",
+      "button1": "Kontakt",
+      "button2": "Saznaj više"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

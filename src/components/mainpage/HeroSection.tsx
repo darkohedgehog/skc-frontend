@@ -12,7 +12,8 @@ export default function HeroSection() {
   const pathname = usePathname();
   const pathSegments = pathname.split('/');
   const currentLocale = pathSegments[1] || 'sr-Latn';
-  const localizedPath = `/${currentLocale}${'/kontakt'}`;
+  const localizedPathContact = `/${currentLocale}${'/kontakt'}`;
+  const localizedPathAbout = `/${currentLocale}${'/o-nama'}`;
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto pt-20 md:pt-40 relative overflow-hidden px-4 md:px-8">
@@ -34,16 +35,19 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full items-center">
           <div className="flex items-center gap-4 justify-start my-4 relative z-10">
             <Link 
-                href={localizedPath}>
+                href={localizedPathContact}>
             <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
               <span>{t('button1')}</span>{" "}
               <HiArrowRight className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
             </button>
             </Link>
           </div>
+          <Link
+            href={localizedPathAbout}>
           <button className="text-gray dark:text-300 text-base font-medium">
           {t('button2')}
           </button>
+          </Link>
         </div>
       </div>
       <div>

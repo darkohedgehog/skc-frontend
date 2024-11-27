@@ -50,6 +50,16 @@
       "designation6": "za sve uzraste",
       "paragraph": "Zadovoljstvo naših posetitelja"
     },
+    "AboutSection":{
+      "title1": "Naša delatnost",
+      "title2": "Čuvari tradicije",
+      "paragraph1": "Čuvanje i unapređenje tradicionalnih, kulturnih i umetničkih izraza područja koje pokriva Ustanova, čuva, razvija i unapređuje sve oblike kulturnog i umetničkog stvaralaštva...",
+      "title3": "Kultura i umetnost",
+      "paragraph2": "Organizacija svih oblika zabavnih, kulturnih i umetničkih potreba srpske etničke zajednice",
+      "title4": "Prikupljamo i stručno obrađujemo, čuvamo i obnavljamo bibliotečku građu",
+      "paragraph3": "U okviru Ustanove deluje biblioteka „Zaharija Orfelin“ kao i ogranak Vukove zadužbine",
+      "button": "O nama"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

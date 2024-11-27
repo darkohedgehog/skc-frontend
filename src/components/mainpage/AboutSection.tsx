@@ -2,12 +2,22 @@
 import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "../ui/wobble-card";
+import { useTranslations } from 'next-intl';
+import { MdOutlineAssuredWorkload } from "react-icons/md";;
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 export default function AboutSection() {
+    const pathname = usePathname();
+    const pathSegments = pathname.split('/');
+    const currentLocale = pathSegments[1] || 'sr-Latn';
+    const localizedPathAbout = `/${currentLocale}${'/o-nama'}`;
+    const t = useTranslations('AboutSection');
+
   return (
     <>
     <h1 className="flex items-center justify-center pt-10 mt-20 text-accent dark:text-accentDark text-4xl lg:text-5xl font-semibold">
-        Naša delatnost
+        {t('title1')}
     </h1>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full pt-10 mt-20">
       <WobbleCard
@@ -16,10 +26,10 @@ export default function AboutSection() {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Čuvari tradicije
+          {t('title2')}
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-          Čuvanje i unapređenje tradicionalnih, kulturnih i umetničkih izraza područja koje pokriva Ustanova, čuva, razvija i unapređuje sve oblike kulturnog i umetničkog stvaralaštva...
+          {t('paragraph1')}
           </p>
         </div>
         <Image
@@ -27,34 +37,45 @@ export default function AboutSection() {
           width={500}
           height={500}
           alt="Uskrs"
+          priority
           className="absolute -right-4 lg:-right-[5%] -bottom-10 object-contain rounded-2xl h-80 w-auto lg:h-auto"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-         Kultura i umetnost
+        {t('title3')}
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-        Organizacija svih oblika zabavnih, kulturnih i umetničkih potreba srpske etničke zajednice
+        {t('paragraph2')}
         </p>
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          Prikupljamo i stručno obrađujemo, čuvamo i obnavljamo bibliotečku građu
+          {t('title4')}
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          U okviru Ustanove deluje biblioteka „Zaharija Orfelin“ kao i ogranak Vukove zadužbine
+          {t('paragraph3')}
           </p>
         </div>
         <Image
           src="/vuk-karadzic.jpg"
           width={500}
           height={500}
-          alt="linear demo image"
+          alt="Vuk Karadzic"
+          priority
           className="absolute -right-10 md:-right-[40%] lg:-right-[3%] -bottom-1 object-contain rounded-2xl h-80 lg:h-auto w-auto"
         />
       </WobbleCard>
+    </div>
+    <div className="flex items-center justify-center my-16">
+      <Link 
+            href={localizedPathAbout}>
+            <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
+              <span>{t('button')}</span>{" "}
+              <MdOutlineAssuredWorkload className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
+            </button>
+     </Link>
     </div>
     </>
   );

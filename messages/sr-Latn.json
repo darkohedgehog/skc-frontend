@@ -35,6 +35,21 @@
       "button1": "Kontakt",
       "button2": "Saznaj više"
     },
+    "FeaturedImages": {
+      "name1": "Biblioteka",
+      "designation1": "Zaharije Orfelin",
+      "name2": "Izložbe",
+      "designation2": "srpskih umetnika",
+      "name3": "Muzika",
+      "designation3": "čuvar tradicije",
+      "name4": "Pismo",
+      "designation4": "blago za pokoljenja",
+      "name5": "Predavanja",
+      "designation5": "o kulturi",
+      "name6": "Radionice",
+      "designation6": "za sve uzraste",
+      "paragraph": "Zadovoljstvo naših posetitelja"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

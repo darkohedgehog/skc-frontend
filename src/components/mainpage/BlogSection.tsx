@@ -55,7 +55,7 @@ const BlogSection = () => {
     <section className="my-16">
       <div className="container px-6 py-10 mx-auto">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-3xl dark:text-accentDark">
+          <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-4xl dark:text-accentDark">
             Najnovije vijesti
           </h1>
         </div>

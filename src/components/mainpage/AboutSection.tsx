@@ -6,7 +6,7 @@ import { WobbleCard } from "../ui/wobble-card";
 export default function AboutSection() {
   return (
     <>
-    <h1 className="flex items-center justify-center pt-10 mt-20 text-accent dark:text-accentDark text-4xl lg:text-5xl font-bold">
+    <h1 className="flex items-center justify-center pt-10 mt-20 text-accent dark:text-accentDark text-4xl lg:text-5xl font-semibold">
         Naša delatnost
     </h1>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full pt-10 mt-20">

@@ -1,5 +1,5 @@
-
 "use client";
+
 import React, { useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
@@ -8,22 +8,21 @@ const SearchBar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const searchParams = useSearchParams();
-  const pathname = usePathname(); // Get the current route path
-  const { replace } = useRouter(); // Next js function to replace routes
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Handle search query submission
   const handleSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
     if (searchQuery) params.set("search", searchQuery);
     else params.delete("search");
-    // Always routes with the search query
-    replace(`/?${params.toString()}`);
+
+    router.replace(`${pathname}?${params.toString()}`);
     setSearchOpen(false); // Close search bar after submission
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto bg-inherit py-3 sm:py-6 z-50  ">
-      <nav className="flex justify-between items-center mb-2 p-4 ">
+    <div className="max-w-screen-lg ml-auto bg-inherit py-3 sm:py-6 z-50">
+      <nav className="flex justify-between items-center mb-2 p-4">
         <div className="flex items-center gap-4">
           <button
             onClick={() => setSearchOpen((prev) => !prev)}
@@ -32,7 +31,6 @@ const SearchBar = () => {
             {searchOpen ? <FaTimes /> : <FaSearch />}
           </button>
 
-          {/* Search Box (toggles visibility) */}
           {searchOpen && (
             <div className="ml-4 flex items-center gap-2">
               <input
@@ -40,8 +38,7 @@ const SearchBar = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search posts..."
-                defaultValue={searchParams.get("search")?.toString()}
-                className="bg-gray-800 appearance-none placeholder:text-sm placeholder:font-normal text-sm text-white placeholder-gray-400 border-b-2 border-purple-500 focus:border-purple-300 outline-none px-2 py-1 rounded-md"
+                className="bg-gray-800 placeholder:text-sm text-sm text-white placeholder-gray-400 border-b-2 border-purple-500 focus:border-purple-300 outline-none px-2 py-1 rounded-md"
               />
               <button
                 onClick={handleSearchSubmit}

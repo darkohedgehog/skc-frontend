@@ -76,5 +76,13 @@
     "BlogDetail": {
       "loading": "Učitavam...",
       "available":"Nema dostupnog sadržaja"
+    },
+    "SearchBar":{
+      "placeholder": "Pretražujte sadržaj",
+      "search": "Pretraži"
+    },
+    "Pagination":{
+      "page": "Strana",
+      "of": "od"
     } 
   }

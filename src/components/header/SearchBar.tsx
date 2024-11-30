@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl';
 
 const SearchBar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -10,6 +11,7 @@ const SearchBar = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations('SearchBar');
 
   const handleSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
@@ -37,14 +39,14 @@ const SearchBar = () => {
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search posts..."
-                className="bg-gray-800 placeholder:text-sm text-sm text-white placeholder-gray-400 border-b-2 border-purple-500 focus:border-purple-300 outline-none px-2 py-1 rounded-md"
+                placeholder={t('placeholder')}
+                className="placeholder:text-sm text-sm text-neutral-800 dark:text-white placeholder-gray border-b-2 border-purple-500 focus:border-purple-300 outline-none px-2 py-1 rounded-xl"
               />
               <button
                 onClick={handleSearchSubmit}
-                className="bg-purple-600 text-sm hover:bg-purple-500 text-white px-2 py-1 rounded-md transition-colors"
+                className="bg-purple-600 text-sm hover:bg-purple-500 text-white px-2 py-1 rounded-2xl transition-colors"
               >
-                Search
+                {t('search')}
               </button>
             </div>
           )}

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 interface PaginationProps {
   currentPage: number;
@@ -12,6 +13,9 @@ const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   onPageChange,
 }) => {
+  
+  const t = useTranslations('Pagination');
+
   return (
     <div className="mt-8 flex justify-center items-center space-x-4">
       <button
@@ -26,7 +30,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <FaArrowLeft /> {/* Previous button icon */}
       </button>
       <span className="text-gray">
-        Page {currentPage} of {totalPages}
+        {t('page')} {currentPage} {t('of')} {totalPages}
       </span>
       <button
         disabled={currentPage === totalPages || currentPage > totalPages}

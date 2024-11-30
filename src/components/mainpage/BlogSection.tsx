@@ -19,11 +19,20 @@ const BlogSection = () => {
     const currentLocale = pathSegments[1] || 'sr-Latn';
     const localizedPathBlog = `/${currentLocale}${'/blog'}`;
 
+    const formatDate = (isoDate: string): string => {
+      const date = new Date(isoDate);
+      const day = date.getDate().toString().padStart(2, '0');
+      const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Mesiaci su indeksirani od 0
+      const year = date.getFullYear();
+      return `${day}.${month}.${year}`;
+    };
+    
+
   // Funkcija za preuzimanje blogova
   async function fetchBlogs(locale: string): Promise<{ data: BlogType[] } | null> {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&sort=publishedAt:desc&populate=image`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&sort=publishedAt:desc&populate[0]=image&populate[1]=category`
       );
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
@@ -92,16 +101,30 @@ const BlogSection = () => {
                   />
                 )}
                 <div className="mt-8">
-                  <span className="dark:text-darkpurple text-blue-500 uppercase">{blog.title}</span>
-                  <p className="mt-2 text-gray dark:text-gray-400">
+                <span className="dark:text-darkpurple text-blue-500 uppercase">{blog.title}</span>
+
+               {blog.category && blog.category.length > 0 && (
+               <p className="text-sm text-darkblue dark:text-blue-500 my-3">
+                 {" "}
+                {blog.category.map((cat) => (
+               <span key={cat.id} className="mr-2">
+                 {cat.name}
+              </span>
+                ))}
+               </p>
+                )}
+                  <p className="mt-2 text-gray">
                     {blog.description}
+                  </p>
+                  <p className="mt-2 text-sm text-darkblue dark:text-blue-500">
+                  {formatDate(blog.published)}
                   </p>
                   <div className="flex items-center justify-start mt-4">
                     <Link
                       href={`/${locale}/blog/${blog.slug}`}
                       className="inline-block text-blue-500 dark:text-accentDark underline hover:text-blue-400 hover:dark:text-accent"
                     >
-                      Više
+                      {t('link')}
                     </Link>
                   </div>
                 </div>

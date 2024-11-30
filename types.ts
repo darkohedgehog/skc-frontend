@@ -23,6 +23,12 @@ export type BlogType = {
         medium?: { url: string };
       };
     };
+    category?: Array<{
+      id: number;
+      name: string;
+      slug: string;
+      description?: string;
+    }>;  
   };
 
   export type BlogSlugType = {

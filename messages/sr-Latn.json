@@ -60,6 +60,12 @@
       "paragraph3": "U okviru Ustanove deluje biblioteka „Zaharija Orfelin“ kao i ogranak Vukove zadužbine",
       "button": "O nama"
     },
+    "BlogSection":{
+      "loading": "Učitavanje blogova, molimo sačekajte...",
+      "no_blogs":"Trenutno nema blogova.",
+      "title": "Najnovije vesti",
+      "button": "Saznaj više"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

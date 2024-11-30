@@ -5,12 +5,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { BlogType } from "../../../types";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { usePathname } from 'next/navigation';
 
 const BlogSection = () => {
-  const t = useTranslations("Blog");
+  const t = useTranslations("BlogSection");
   const locale = useLocale();
   const [blogs, setBlogs] = useState<BlogType[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const pathname = usePathname();
+    const pathSegments = pathname.split('/');
+    const currentLocale = pathSegments[1] || 'sr-Latn';
+    const localizedPathBlog = `/${currentLocale}${'/blog'}`;
 
   // Funkcija za preuzimanje blogova
   async function fetchBlogs(locale: string): Promise<{ data: BlogType[] } | null> {
@@ -44,11 +51,14 @@ const BlogSection = () => {
   }, [locale]);
 
   if (loading) {
-    return <p>{t("loading")}</p>;
+    return <p className="flex items-center justify-center text-accent dark:text-accentDark">
+      {t("loading")}
+      </p>;
   }
 
   if (blogs.length === 0) {
-    return <p>{t("no_blogs")}</p>;
+    return <p className="flex items-center justify-center text-accent dark:text-accentDark">
+      {t("no_blogs")}</p>;
   }
 
   return (
@@ -56,7 +66,7 @@ const BlogSection = () => {
       <div className="container px-6 py-10 mx-auto">
         <div className="flex items-center justify-center">
           <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-4xl dark:text-accentDark">
-            Najnovije vijesti
+            {t('title')}
           </h1>
         </div>
 
@@ -100,6 +110,15 @@ const BlogSection = () => {
           })}
         </div>
       </div>
+      <div className="flex items-center justify-center my-16">
+      <Link 
+            href={localizedPathBlog}>
+            <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
+              <span>{t('button')}</span>{" "}
+              <IoNewspaperOutline className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
+            </button>
+     </Link>
+    </div>
     </section>
   );
 };

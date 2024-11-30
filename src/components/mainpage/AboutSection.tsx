@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "../ui/wobble-card";
 import { useTranslations } from 'next-intl';
-import { MdOutlineAssuredWorkload } from "react-icons/md";;
+import { MdOutlineAssuredWorkload } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 

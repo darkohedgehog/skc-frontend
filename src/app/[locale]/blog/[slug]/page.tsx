@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { BlogSlugType } from "../../../../../types";
+import { ParallaxScrollBlog } from "@/components/blog/ParallaxScrollBlog";
 
 async function fetchBlogBySlug(slug: string, locale: string): Promise<BlogSlugType | null> {
   try {
@@ -50,42 +51,49 @@ const BlogDetail = () => {
     );
   }
 
-  const thumbnailUrl = blog.image?.formats?.medium?.url || blog.image?.url;
+  const formatDate = (isoDate: string): string => {
+    const date = new Date(isoDate);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  };
+
+  const thumbnailUrl = blog.image?.formats?.medium?.url ||
+                       blog.image?.formats?.small?.url ||
+                       blog.image?.url;
 
   return (
     <div className="px-10 md:px-20 py-8">
-      <h1 className="text-[24px] uppercase font-bold mb-16 text-center text-accent">
+      <h1 className="text-2xl uppercase font-bold mb-16 text-center text-accent dark:text-accentDark">
         {blog.title}
       </h1>
+      <p className="mb-6 text-sm text-darkblue dark:text-blue-500 flex items-center justify-start gap-2">
+               <span className="text-neutral-800 dark:text-gray">
+                Objavljeno
+                </span> 
+               {formatDate(blog.published)}
+              </p>
       {thumbnailUrl ? (
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_URL}${thumbnailUrl}`}
           alt={blog.title}
           width={300}
           height={200}
-          priority={false}
+          priority
           className="rounded-xl object-cover h-96 w-3/4 mx-auto shadow-md shadow-accent"
         />
       ) : (
         <div className="w-full h-[300px] bg-gray-200 rounded-lg"></div>
       )}
 
-      <p className="mt-8 text-gray dark:text-white">{blog.content}</p>
+      <p className="mt-16 text-neutral-800 dark:text-gray text-lg">{blog.content}</p>
 
       {blog.gallery && blog.gallery.length > 0 && (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
-          {blog.gallery.map((image, index) => (
-            <div key={index} className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_URL}${image.formats?.medium?.url || image.url}`}
-                alt={`Gallery image ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      )}
+         <div className="mt-8">
+           <ParallaxScrollBlog gallery={blog.gallery} />
+         </div>
+        )}
 
       {blog.category && blog.category.length > 0 && (
         <div className="categories mt-8">
@@ -93,7 +101,7 @@ const BlogDetail = () => {
           <ul>
             {blog.category.map((cat) => (
               <li key={cat.id} className="text-accent">
-                {cat.name} - {cat.description}
+                {cat.name}
               </li>
             ))}
           </ul>

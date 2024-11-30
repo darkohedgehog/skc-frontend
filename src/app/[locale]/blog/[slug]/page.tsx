@@ -6,8 +6,6 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { BlogSlugType } from "../../../../../types";
 
-
-
 async function fetchBlogBySlug(slug: string, locale: string): Promise<BlogSlugType | null> {
   try {
     const res = await fetch(
@@ -66,7 +64,7 @@ const BlogDetail = () => {
           width={300}
           height={200}
           priority={false}
-          className="rounded-lg object-cover h-40 w-72 mx-auto shadow-lg"
+          className="rounded-xl object-cover h-96 w-3/4 mx-auto shadow-md shadow-accent"
         />
       ) : (
         <div className="w-full h-[300px] bg-gray-200 rounded-lg"></div>
@@ -75,16 +73,16 @@ const BlogDetail = () => {
       <p className="mt-8 text-gray dark:text-white">{blog.content}</p>
 
       {blog.gallery && blog.gallery.length > 0 && (
-        <div className="gallery grid grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
           {blog.gallery.map((image, index) => (
-            <Image
-              key={index}
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}${image.formats?.medium?.url || image.url}`}
-              alt={`Gallery image ${index + 1}`}
-              width={300}
-              height={200}
-              className="rounded-lg shadow-lg"
-            />
+            <div key={index} className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_URL}${image.formats?.medium?.url || image.url}`}
+                alt={`Gallery image ${index + 1}`}
+                fill
+                className="object-cover"
+              />
+            </div>
           ))}
         </div>
       )}

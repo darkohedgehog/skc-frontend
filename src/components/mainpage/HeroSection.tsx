@@ -53,7 +53,7 @@ export default function HeroSection() {
       <div>
         <div className="border border-neutral-200 dark:border-neutral-800 rounded-3xl p-4 bg-neutral-100 dark:bg-neutral-900 shadow-[0px_0px_5px_1px_rgba(0,0,0,0.05)_inset] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.05)_inset]">
           <Image
-            src="/herobanner.png"
+            src="/banner.jpg"
             alt="Dashboard Image"
             width={1000}
             height={1000}

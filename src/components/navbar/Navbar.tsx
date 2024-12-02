@@ -30,24 +30,24 @@ const Navbar = () => {
   const navItems = [
     {
       name: t("title1"),
-      link: "/",
+      link: `/${currentLocale}/`, // Dodavanje jezika u link
       children: [
-        { name: t("title2"), link: "/o-nama" },
-        { name: t("title3"), link: "/direktor" },
-        { name: t("title4"), link: "/statut" },
-        { name: t("title5"), link: "/izvestaji" },
-        { name: t("title12"), link: "/blog" },
+        { name: t("title2"), link: `/${currentLocale}/o-nama` },
+        { name: t("title3"), link: `/${currentLocale}/direktor` },
+        { name: t("title4"), link: `/${currentLocale}/statut` },
+        { name: t("title5"), link: `/${currentLocale}/izvestaji` },
+        { name: t("title12"), link: `/${currentLocale}/blog` },
       ],
     },
     {
       name: t("title6"),
-      link: "/kultura",
+      link: `/${currentLocale}/kultura`,
       children: [
-        { name: t("title7"), link: "/biblioteka" },
-        { name: t("title11"), link: "/arhivska-gradja" },
+        { name: t("title7"), link: `/${currentLocale}/biblioteka` },
+        { name: t("title11"), link: `/${currentLocale}/arhivska-gradja` },
       ],
     },
-    { name: t("title9"), link: "/kontakt" },
+    { name: t("title9"), link: `/${currentLocale}/kontakt` },
   ];
 
   return (
@@ -61,6 +61,9 @@ const Navbar = () => {
 const DesktopNav = ({ navItems }: any) => {
   const [active, setActive] = useState<string | null>(null);
   const t = useTranslations("NavBar");
+  const pathname = usePathname();
+  const pathSegments = pathname.split("/");
+  const currentLocale = pathSegments[1] || "sr-Latn";
 
   return (
     <motion.div
@@ -74,31 +77,31 @@ const DesktopNav = ({ navItems }: any) => {
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item={t("title1")}>
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/o-nama">{t("title2")}</HoveredLink>
-              <HoveredLink href="/direktor">{t("title3")}</HoveredLink>
-              <HoveredLink href="/statut">{t("title4")}</HoveredLink>
-              <HoveredLink href="/izvestaji">{t("title5")}</HoveredLink>
-              <HoveredLink href="/blog">{t("title12")}</HoveredLink>
+              <HoveredLink href={`/${currentLocale}/o-nama`}>{t("title2")}</HoveredLink>
+              <HoveredLink href={`/${currentLocale}/direktor`}>{t("title3")}</HoveredLink>
+              <HoveredLink href={`/${currentLocale}/statut`}>{t("title4")}</HoveredLink>
+              <HoveredLink href={`/${currentLocale}/izvestaji`}>{t("title5")}</HoveredLink>
+              <HoveredLink href={`/${currentLocale}/blog`}>{t("title12")}</HoveredLink>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item={t("title6")}>
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title={t("title10")}
-                href="/biblioteka"
+                href={`/${currentLocale}/biblioteka`}
                 src="https://assets.aceternity.com/demos/algochurn.webp"
                 description={t("paragraph1")}
               />
               <ProductItem
                 title={t("title11")}
-                href="/arhivska-gradja"
+                href={`/${currentLocale}/arhivska-gradja`}
                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
                 description={t("paragraph2")}
               />
             </div>
           </MenuItem>
           <Link
-            href="/kontakt"
+            href={`/${currentLocale}/kontakt`}
             className="text-accent dark:text-accentDark font-medium hover:text-zinc-800 transition duration-200"
           >
             {t("title9")}

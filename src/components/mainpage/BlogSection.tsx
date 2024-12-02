@@ -72,7 +72,7 @@ const BlogSection = () => {
 
   return (
     <section className="my-16">
-      <div className="container px-6 py-10 mx-auto">
+      <div className="container lg:px-10 px-4 py-10 mx-auto">
         <div className="flex items-center justify-center">
           <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-4xl dark:text-accentDark">
             {t('title')}

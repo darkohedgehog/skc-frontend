@@ -68,6 +68,17 @@
       "link": "Više",
       "button": "Saznaj više"
     },
+    "LibrarySection": {
+      "title1": "Biblioteka",
+      "title2": "Zaharija Orfelin",
+      "title3": "Veliki izbor knjiga",
+      "paragraph1": "Više od 20.000 naslova koje smo vredno prikupili i ljubomorno ih čuvamo za vas. Obogatite svoje znanje i upoznajte se sa našom kolekcijom...",
+      "title4": "Predavanja",
+      "paragraph2": "Organizujemo predavanja za sve učenike osnovnih i srednjih škola. Budite naši gosti i uverite se u kvalitet naših predavača...",
+      "title5": "Veliki broj članova",
+      "paragraph3": "Učlanite se u našu biblioteku i sigurno ćete pronaći i uživajte u knjigama koje čuvamo za vas...",
+      "button": "Istražite"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

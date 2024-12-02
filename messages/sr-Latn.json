@@ -75,7 +75,11 @@
     },
     "BlogDetail": {
       "loading": "Učitavam...",
-      "available":"Nema dostupnog sadržaja"
+      "available":"Nema dostupnog sadržaja",
+      "published":"Objavljeno",
+      "category": "Kategorija",
+      "language": "Dostupno je i na jeziku",
+      "button": "Nazad"
     },
     "SearchBar":{
       "placeholder": "Pretražujte sadržaj",

@@ -32,6 +32,7 @@ const Navbar = () => {
       name: t("title1"),
       link: `/${currentLocale}/`, // Dodavanje jezika u link
       children: [
+        { name: t("title13"), link: `/${currentLocale}/` },
         { name: t("title2"), link: `/${currentLocale}/o-nama` },
         { name: t("title3"), link: `/${currentLocale}/direktor` },
         { name: t("title4"), link: `/${currentLocale}/statut` },
@@ -77,6 +78,7 @@ const DesktopNav = ({ navItems }: any) => {
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item={t("title1")}>
             <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href={`/${currentLocale}/`}>{t("title13")}</HoveredLink>
               <HoveredLink href={`/${currentLocale}/o-nama`}>{t("title2")}</HoveredLink>
               <HoveredLink href={`/${currentLocale}/direktor`}>{t("title3")}</HoveredLink>
               <HoveredLink href={`/${currentLocale}/statut`}>{t("title4")}</HoveredLink>

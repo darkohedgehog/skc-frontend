@@ -49,7 +49,7 @@ const BlogDetail = () => {
 
   if (!blog) {
     return (
-      <div className="flex items-center justify-center text-accent h-screen">
+      <div className="flex items-center justify-center text-accent h-screen mt-40">
         {t("loading")}
       </div>
     );

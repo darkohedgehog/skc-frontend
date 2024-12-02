@@ -71,7 +71,9 @@
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",
       "title": "Pratite najnovija dešavanja",
-      "available": "Nema dostupnih blogova"
+      "available": "Nema dostupnih blogova",
+      "newest": "Nove vesti",
+      "oldest": "Starije vesti"
     },
     "BlogDetail": {
       "loading": "Učitavam...",

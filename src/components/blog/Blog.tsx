@@ -126,11 +126,16 @@ const Blog = () => {
         </div>
       </div>
        {/* SearchBar */}
-       <div className="flex justify-between items-center mb-8">
+       <div className="flex justify-between items-center mb-6">
         <SearchBar />
       </div>
       </div>
+      <h1 className="flex items-center justify-center mb-8 text-xl lg:text-3xl font-semibold text-accent dark:text-accentDark">
+        {t('title')}
+      </h1>
+
       <hr className="mb-6 border-gray" />
+      
       {/* Blogovi */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {sortedAndFilteredBlogs.map((blog) => {

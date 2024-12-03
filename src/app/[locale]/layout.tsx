@@ -43,7 +43,7 @@ export default async function LocaleLayout(props: {
             <div className='relative z-10'>
              <NavbarWithChildren />
                {props.children}
-               <Footer />
+              <Footer />
            </div>
           </ThemeProvider>
         </NextIntlClientProvider>

@@ -1,9 +1,12 @@
-import React from 'react'
+import BooksPage from '@/components/books/BooksPage';
+import React from 'react';
 
 const BibliotekaPage = () => {
   return (
-    <div>BibliotekaPage</div>
+    <>
+      <BooksPage />
+    </>
   )
 }
 
-export default BibliotekaPage
+export default BibliotekaPage;

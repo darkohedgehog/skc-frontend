@@ -5,6 +5,7 @@ import {routing} from '@/i18n/routing';
 import type { Metadata } from "next";
 import { ThemeProvider } from 'next-themes';
 import { NavbarWithChildren } from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
     title: "Srpski kulturni centar",
@@ -42,6 +43,7 @@ export default async function LocaleLayout(props: {
             <div className='relative z-10'>
              <NavbarWithChildren />
                {props.children}
+               <Footer />
            </div>
           </ThemeProvider>
         </NextIntlClientProvider>

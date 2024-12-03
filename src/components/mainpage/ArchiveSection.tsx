@@ -16,7 +16,7 @@ const ArchiveSection = () => {
     const localizedPathArchive = `/${currentLocale}${'/arhivska-gradja'}`;
 
   return (
-    <div className='mt-6'>
+    <div className='my-6'>
         <motion.h1 
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ const ArchiveSection = () => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className='flex items-center justify-center my-14'>
+        className='flex items-center justify-center my-20'>
             <Link 
             href={localizedPathArchive}>
                 <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">

@@ -29,6 +29,16 @@
         "paragraph1": "Sadrži više od 20.000 naslova",
         "paragraph2": "Istorijski dokumenti obrađeni u digitalnom formatu"
     },
+    "Footer": {
+      "uslovi": "Uslovi korištenja",
+      "pravila": "Pravila privatnosti",
+      "kontakt": "Kontakt",
+      "title1": "Budimo u kontaktu",
+      "address1": "Eugena Kvaternika 1",
+      "address2": "32000 Vukovar",
+      "title2": "Srpski kulturni centar Vukovar",
+      "title3": "Sva prava zadržana"
+    },
     "HeroSection": {
       "title1": "Ustanova u oblasti kulture",
       "span": "Srpski kulturni centar",

@@ -91,13 +91,13 @@ const DesktopNav = ({ navItems }: any) => {
               <ProductItem
                 title={t("title10")}
                 href={`/${currentLocale}/biblioteka`}
-                src="https://assets.aceternity.com/demos/algochurn.webp"
+                src="/assets/knjiga.webp"
                 description={t("paragraph1")}
               />
               <ProductItem
                 title={t("title11")}
                 href={`/${currentLocale}/arhivska-gradja`}
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                src="/assets/arhiva.webp"
                 description={t("paragraph2")}
               />
             </div>

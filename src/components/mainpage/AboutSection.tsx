@@ -16,10 +16,10 @@ export default function AboutSection() {
 
   return (
     <>
-    <h1 className="flex items-center justify-center pt-10 mt-20 text-accent dark:text-accentDark text-4xl lg:text-5xl font-semibold">
+    <h1 className="flex items-center justify-center pt-10 mt-20 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl">
         {t('title1')}
     </h1>
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full pt-10 mt-20">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full pt-10 mt-20 px-2">
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""

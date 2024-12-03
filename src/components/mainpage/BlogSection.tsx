@@ -74,7 +74,7 @@ const BlogSection = () => {
     <section className="my-16">
       <div className="container lg:px-10 px-4 py-10 mx-auto">
         <div className="flex items-center justify-center">
-          <h1 className="text-2xl font-semibold text-darkpurple uppercase lg:text-4xl dark:text-accentDark">
+          <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl my-6">
             {t('title')}
           </h1>
         </div>

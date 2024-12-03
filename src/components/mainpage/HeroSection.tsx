@@ -18,18 +18,18 @@ export default function HeroSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto pt-20 md:pt-40 relative overflow-hidden px-4 md:px-8">
       <div className="flex flex-col items-start">
-        <h1 className="text-3xl md:text-5xl md:leading-tight max-w-5xl text-left tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-800 dark:via-white dark:to-white from-neutral-800 via-neutral-600 to-neutral-600">
+        <h1 className="text-3xl md:text-5xl md:leading-tight max-w-5xl text-center lg:text-left tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-800 dark:via-white dark:to-white from-neutral-800 via-neutral-600 to-neutral-600">
        {t('title1')}
-       <span className="uppercase text-4xl gap-1 flex items-center justify-start text-accent dark:text-accentDark">
+       <span className="uppercase text-4xl gap-1 flex items-center justify-center lg:justify-start text-accent dark:text-accentDark">
         {t('span')}
         </span>
         </h1>
-        <p className=" mt-2 md:mt-6 text-left md:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl  relative z-10">
+        <p className=" mt-2 md:mt-6 text-center lg:text-left md:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl  relative z-10">
         {t('paragraph')}
         </p>
         <FeaturedImages
-          textClassName="lg:text-left text-left"
-          className="lg:justify-start justify-start items-center"
+          textClassName="lg:text-left text-center"
+          className="lg:justify-start justify-center items-center mx-12 lg:mx-auto"
           showStars
         />
         <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start w-full items-center">

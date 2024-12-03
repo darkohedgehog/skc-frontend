@@ -79,6 +79,11 @@
       "paragraph3": "Učlanite se u našu biblioteku i sigurno ćete pronaći i uživajte u knjigama koje čuvamo za vas...",
       "button": "Istražite"
     },
+    "ArchiveSection": {
+      "title": "Arhivska građa",
+      "paragraph": "Brinemo o arhivskoj građi i materijalu. Vršimo digitalnu restauraciju arhivske građe sa naših prostora.",
+      "button": "Saznaj više"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

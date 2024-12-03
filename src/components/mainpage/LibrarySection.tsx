@@ -4,7 +4,7 @@ import { IoLibraryOutline } from "react-icons/io5";
 import { MdOutlineLocalLibrary } from "react-icons/md";
 import { LuUser } from "react-icons/lu";
 import { motion } from "framer-motion";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 

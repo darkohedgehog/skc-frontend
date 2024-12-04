@@ -1,9 +1,12 @@
-import React from 'react'
+import ArchiveComponent from '@/components/arhiva/ArchiveComponent';
+import React from 'react';
 
 const ArhivaPage = () => {
   return (
-    <div>ArhivaPage</div>
+    <>
+      <ArchiveComponent />
+    </>
   )
 }
 
-export default ArhivaPage
+export default ArhivaPage;

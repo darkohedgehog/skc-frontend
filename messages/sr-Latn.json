@@ -94,6 +94,14 @@
       "paragraph": "Brinemo o arhivskoj građi i materijalu. Vršimo digitalnu restauraciju arhivske građe sa naših prostora.",
       "button": "Saznaj više"
     },
+    "ArchiveComponent": {
+      "title1": "Čuvamo našu istoriju",
+      "title2": "Digitalizacija i restauracija arhivske građe",
+      "paragraph1": "Arhivska građa predstavlja neprocenjivo blago koje čuva istoriju, kulturu i identitet naših prostora. Naš tim posvećen je prikupljanju, obradi i digitalnoj restauraciji arhivskih materijala, omogućavajući im da traju kroz vekove.",
+      "paragraph2": "Pažljivo digitalizujemo stare dokumente, fotografije, rukopise i druge vredne zapise.",
+      "button1": "Istraži",
+      "button2": "Kontakt"
+    },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
       "loading": "Učitavanje blogova, molimo sačekajte...",

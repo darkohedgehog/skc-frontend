@@ -136,7 +136,7 @@ const BlogDetail = () => {
         onClick={() => router.back()}>
           <span className='text-white uppercase text-sm flex items-center justify-center gap-2'>
           <IoReturnDownBackOutline className='w-5 h-5' />
-          {t("button")}
+          {t('button')}
             </span>
         </button>
         </div>

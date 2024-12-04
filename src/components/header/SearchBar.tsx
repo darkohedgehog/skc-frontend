@@ -2,12 +2,14 @@
 
 import React, { useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+  const t = useTranslations('SearchBar');
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -33,14 +35,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 type="search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Pretraži knjige..."
+                placeholder={t('placeholder')}
                 className="placeholder:text-sm text-sm text-neutral-800 dark:text-white placeholder-gray border-b-2 border-purple-500 focus:border-purple-300 outline-none px-2 py-1 rounded-xl"
               />
               <button
                 onClick={handleSearchSubmit}
                 className="bg-purple-600 text-sm hover:bg-purple-500 text-white px-2 py-1 rounded-2xl transition-colors"
               >
-                Pretraži
+                {t('search')}
               </button>
             </div>
           )}

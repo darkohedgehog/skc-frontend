@@ -18,8 +18,6 @@ const Blog = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState<string>(""); // Dodajemo state za pretragu
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
-  const [selectedCategory] = useState<string>("");
-
   const blogsPerPage = 6;
 
   const formatDate = (isoDate: string): string => {
@@ -34,7 +32,8 @@ const Blog = () => {
     locale: string,
     page: number,
     limit: number,
-    search: string
+    search: string,
+    order: "asc" | "desc"
   ): Promise<{ data: BlogType[]; meta: { pagination: { pageCount: number } } } | null> {
     try {
       const searchFilter = search
@@ -44,7 +43,7 @@ const Blog = () => {
         : "";
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&populate=image&pagination[page]=${page}&pagination[pageSize]=${limit}&sort=publishedAt:desc${searchFilter}`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&populate=image&pagination[page]=${page}&pagination[pageSize]=${limit}&sort=publishedAt:${order}${searchFilter}`
       );
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
@@ -59,7 +58,13 @@ const Blog = () => {
   useEffect(() => {
     const getBlogs = async () => {
       setLoading(true);
-      const blogData = await fetchBlogs(locale, currentPage, blogsPerPage, searchQuery);
+      const blogData = await fetchBlogs(
+        locale,
+        currentPage,
+        blogsPerPage,
+        searchQuery,
+        sortOrder
+      );
       if (blogData?.data) {
         setBlogs(blogData.data);
         setTotalPages(blogData.meta.pagination.pageCount);
@@ -70,7 +75,7 @@ const Blog = () => {
     };
 
     getBlogs();
-  }, [locale, currentPage, searchQuery]);
+  }, [locale, currentPage, searchQuery, sortOrder]);
 
   if (loading) {
     return (
@@ -143,7 +148,7 @@ const Blog = () => {
                 {blog.category && blog.category.length > 0 && (
                   <div className="mt-14">
                     <h3 className="text-lg font-semibold mb-4 text-neutral-800 dark:text-gray">
-                      Kategorija:
+                      {t("category")}:
                     </h3>
                     <ul>
                       {blog.category.map((cat) => (

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "../pagination/Pagination";
 import SearchBar from "../header/SearchBar";
+import { useTranslations } from 'next-intl';
 
 interface BookType {
   id: number;
@@ -20,6 +21,7 @@ interface BookType {
 }
 
 const BooksPage = () => {
+  const t = useTranslations('BooksPage');
   const [books, setBooks] = useState<BookType[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -67,11 +69,15 @@ const BooksPage = () => {
   };
 
   if (loading) {
-    return <p className="text-center text-gray-500">Loading books...</p>;
+    return <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">
+      {t('loading')}
+      </p>;
   }
 
   if (books.length === 0) {
-    return <p className="text-center text-gray">No books available.</p>;
+    return <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">
+     {t('available')}
+      </p>;
   }
 
   return (
@@ -79,29 +85,32 @@ const BooksPage = () => {
       <div className="flex items-center justify-end">
       <SearchBar onSearch={handleSearch} /> {/* Prosleđuje funkciju pretrage */}
       </div>
-      <h1 className="text-center text-3xl font-bold mb-10 text-purple-700">
-        Biblioteka
+      <h1 className="flex items-center justify-center text-center text-3xl lg:text-4xl font-bold mb-10 text-purple-700 dark:text-accentDark">
+        {t('title1')} <br/> {t('title2')}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <p className="flex items-center justify-center text-clip text-neutral-800 dark:text-gray">
+        {t('paragraph')}
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-20">
         {books.map((book) => (
           <div
             key={book.id}
-            className="border rounded-lg p-4 shadow-md bg-white dark:bg-gray"
+            className="border rounded-xl p-4 shadow-lg shadow-gray dark:shadow-accentDark bg-white dark:bg-gray"
           >
             <h2 className="text-xl font-semibold mb-2 text-purple-700">
               {book.skupina1}
             </h2>
             <p className="text-sm text-neutral-800">
-              <strong>Godina:</strong> {book.godina || "N/A"}
+              <strong>{t('godina')}:</strong> {book.godina || "N/A"}
             </p>
             <p className="text-sm text-neutral-800">
-              <strong>ISBN:</strong> {book.isbn || "N/A"}
+              <strong>{t('ISBN')}:</strong> {book.isbn || "N/A"}
             </p>
             <p className="text-sm text-neutral-800">
-              <strong>Inventurni broj:</strong> {book.invbroj || "N/A"}
+              <strong>{t('inventurni_broj')}:</strong> {book.invbroj || "N/A"}
             </p>
             <p className="text-sm text-neutral-800">
-              <strong>Potpis:</strong> {book.signatura || "N/A"}
+              <strong>{t('signatura')}:</strong> {book.signatura || "N/A"}
             </p>
           </div>
         ))}

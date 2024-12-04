@@ -100,7 +100,8 @@
       "title": "Pratite događaje koje organizujemo",
       "available": "Nema dostupnih blogova",
       "newest": "Nove vesti",
-      "oldest": "Starije vesti"
+      "oldest": "Starije vesti",
+      "category":"Kategorija"
     },
     "BlogDetail": {
       "loading": "Učitavam...",
@@ -114,8 +115,23 @@
       "placeholder": "Pretražujte sadržaj",
       "search": "Pretraži"
     },
+    "SearchBarBlog":{
+      "placeholder": "Pretražujte blogove",
+      "search": "Pretraži"
+    },
     "Pagination":{
       "page": "Strana",
       "of": "od"
-    } 
+    },
+    "BooksPage":{
+      "loading" :"Učitavam...molim sačekajte",
+      "available":"Nema dostupnog sadržaja",
+      "title1": "Biblioteka",
+      "title2": "Zaharija Orfelin",
+      "paragraph": " Više od 20.000 naslova koje smo vredno prikupili i ljubomorno ih čuvamo za vas. Obogatite svoje znanje i upoznajte se sa našom kolekcijom",
+      "godina": "Godina",
+      "ISBN": "ISBN",
+      "inventurni_broj": "Inventurni broj",
+      "signatura": "Signatura"
+    }
   }

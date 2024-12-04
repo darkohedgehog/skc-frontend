@@ -141,5 +141,12 @@
       "ISBN": "ISBN",
       "inventurni_broj": "Inventurni broj",
       "signatura": "Signatura"
+    },
+    "LibraryIntro": {
+      "title1": "Biblioteka Zaharija Orfelin",
+      "title2": "Riznica znanja i kulture",
+      "paragraph1": "Sa preko 20.000 pažljivo prikupljenih naslova, biblioteka Zaharija Orfelin predstavlja pravo utočište za ljubitelje knjige i istraživače znanja. Naša kolekcija obuhvata bogatstvo literature – od klasičnih dela i savremene beletristike do stručnih i naučnih publikacija.",
+      "paragraph2": "Posetite nas i postanite deo priče koju gradimo godinama – priče o kulturi, obrazovanju i ljubavi prema pisanoj reči. Biblioteka Zaharija Orfelin je više od zbirke knjiga – to je vaš prozor u svet znanja.",
+      "button1": "Kontakt"
     }
   }

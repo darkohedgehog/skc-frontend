@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Pagination from "../pagination/Pagination";
 import SearchBar from "../header/SearchBar";
 import { useTranslations } from 'next-intl';
+import LibraryIntro from "./LibraryIntro";
 
 interface BookType {
   id: number;
@@ -81,6 +82,8 @@ const BooksPage = () => {
   }
 
   return (
+    <>
+    <LibraryIntro />
     <div className="px-10 md:px-20 my-20">
       <div className="flex items-center justify-end">
       <SearchBar onSearch={handleSearch} /> {/* Prosleđuje funkciju pretrage */}
@@ -123,6 +126,7 @@ const BooksPage = () => {
         onPageChange={(newPage) => setCurrentPage(newPage)}
       />
     </div>
+    </>
   );
 };
 

@@ -1,9 +1,12 @@
-import React from 'react'
+import Portfolio from '@/components/direktor/Portfolio';
+import React from 'react';
 
 const DirektorPage = () => {
   return (
-    <div>DirektorPage</div>
+    <>
+    <Portfolio/>
+    </>
   )
 }
 
-export default DirektorPage
+export default DirektorPage;

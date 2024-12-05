@@ -1,9 +1,12 @@
-import React from 'react'
+import ReportsComponent from '@/components/reports/ReportsComponent';
+import React from 'react';
 
 const IzvestajiPage = () => {
   return (
-    <div>IzvestajiPage</div>
+    <>
+      <ReportsComponent />
+    </>
   )
 }
 
-export default IzvestajiPage
+export default IzvestajiPage;

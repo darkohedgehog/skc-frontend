@@ -89,3 +89,20 @@ export type BlogType = {
         };
     };
 };
+
+export type ReportType = {
+  id: number;
+  title: string;
+  image?: {
+      id: number;
+      name: string;
+      alternativeText?: string;
+      caption?: string;
+      url: string;
+      formats?: {
+          thumbnail?: { url: string };
+          small?: { url: string };
+          medium?: { url: string };
+      };
+  };
+};

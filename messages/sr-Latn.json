@@ -156,8 +156,9 @@
         "content": "Dokument nije dostupan u PDF formatu."
       },
       "Report": {
-        "loading": "Učitavanje statuta...",
-        "available": "Statut nije pronađen.",
+        "title": "Financijski izveštaji",
+        "loading": "Učitavanje izveštaja...",
+        "available": "Izveštaji nisu pronađeni.",
         "download": "Preuzmi",
         "content": "Dokument nije dostupan u PDF formatu."
       }       

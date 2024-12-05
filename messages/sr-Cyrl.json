@@ -156,9 +156,10 @@
       "content": "Документ није доступан у ПДФ формату."
     } ,
     "Report": {
-      "loading": "Učitavanje statuta...",
-      "available": "Statut nije pronađen.",
-      "download": "Preuzmi",
-      "content": "Dokument nije dostupan u PDF formatu."
+      "title": "Финансијски извештаји",
+      "loading": "Учитавање извештаја...",
+      "notFound": "Иѕвештаји нису пронађени.",
+      "download": "Преузми",
+      "content": "Документ није доступан у ПДФ формату."
     }           
   }

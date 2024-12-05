@@ -24,7 +24,7 @@ const Portfolio = () => {
      className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-xl shadow-lg shadow-gray dark:shadow-accentDark"/>
     <div className="text-center lg:w-2/3 w-full">
       <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-4xl">
-        Direktor Srpskog kulturnog centra Vukovar <br />
+        Direktorica Ustanove u oblasti kulture <br /> Srpski kulturni centar Vukovar <br />
         Jelica Lipovac Dudaš
         </h1>
       <p className="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo booth af fingerstache pitchfork.</p>

@@ -152,7 +152,13 @@
     "Statut": {
       "loading": "Учитавање статута...",
       "notFound": "Статут није пронађен.",
-      "download": "Преузми документ",
-      "contentPlaceholder": "Овде можете пронаћи додатне информације о статуту."
-    }             
+      "download": "Преузми",
+      "content": "Документ није доступан у ПДФ формату."
+    } ,
+    "Report": {
+      "loading": "Učitavanje statuta...",
+      "available": "Statut nije pronađen.",
+      "download": "Preuzmi",
+      "content": "Dokument nije dostupan u PDF formatu."
+    }           
   }

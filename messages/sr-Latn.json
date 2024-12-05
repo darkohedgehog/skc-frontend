@@ -149,11 +149,16 @@
       "paragraph2": "Posetite nas i postanite deo priče koju gradimo godinama – priče o kulturi, obrazovanju i ljubavi prema pisanoj reči. Biblioteka Zaharija Orfelin je više od zbirke knjiga – to je vaš prozor u svet znanja.",
       "button1": "Kontakt"
     },
-    
       "Statut": {
         "loading": "Učitavanje statuta...",
-        "notFound": "Statut nije pronađen.",
-        "download": "Preuzmi dokument",
-        "contentPlaceholder": "Ovde možete pronaći dodatne informacije o statutu."
-      }    
+        "available": "Statut nije pronađen.",
+        "download": "Preuzmi",
+        "content": "Dokument nije dostupan u PDF formatu."
+      },
+      "Report": {
+        "loading": "Učitavanje statuta...",
+        "available": "Statut nije pronađen.",
+        "download": "Preuzmi",
+        "content": "Dokument nije dostupan u PDF formatu."
+      }       
   }

@@ -11,6 +11,7 @@ import LangSwitch from "../header/LangSwitch";
 import { ModeToggle } from "../hooks/useThemeSwitch";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import DyslexiaToggle from "../hooks/DyslexiaToggle";
 
 export function NavbarWithChildren() {
   return (
@@ -113,6 +114,7 @@ const DesktopNav = ({ navItems }: any) => {
       <div className="flex items-center justify-center gap-3">
         <LangSwitch />
         <ModeToggle />
+        <DyslexiaToggle />
       </div>
     </motion.div>
   );
@@ -176,6 +178,7 @@ const MobileNav = ({ navItems }: any) => {
               <div className="flex items-center justify-center gap-3">
              <LangSwitch />
              <ModeToggle />
+             <DyslexiaToggle />
              </div>
             </motion.div>
           )}

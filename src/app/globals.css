@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('./fonts/OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body.dyslexia {
+    font-family: 'OpenDyslexic', Arial, sans-serif;
+  }
+  
 
 

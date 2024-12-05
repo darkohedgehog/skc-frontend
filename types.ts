@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export type BlogType = {
     id: number;
     documentId: string;
@@ -70,3 +72,20 @@ export type BlogType = {
       locale: string;
     }>;
   };
+
+  export type StatutType = {
+    id: number;
+    title: string;
+    image?: {
+        id: number;
+        name: string;
+        alternativeText?: string;
+        caption?: string;
+        url: string;
+        formats?: {
+            thumbnail?: { url: string };
+            small?: { url: string };
+            medium?: { url: string };
+        };
+    };
+};

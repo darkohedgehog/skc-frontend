@@ -1,9 +1,12 @@
-import React from 'react'
+import StatutDocument from '@/components/statut/StatutDocument';
+import React from 'react';
 
 const StatutPage = () => {
   return (
-    <div>StatutPage</div>
+    <>
+    <StatutDocument />
+    </>
   )
 }
 
-export default StatutPage
+export default StatutPage;

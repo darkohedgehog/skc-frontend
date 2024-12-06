@@ -229,5 +229,15 @@
     "paragraph13": " Korisnik je obvezan u slučaju saznanja za činjenice koje ukazuju na mogućnost zloporabe zaporke, bez odgode obavijestiti Pružatelja usluge.",
     "paragraph14": "U slučaju kršenja odredaba Uvjeta korištenja Pružatelj usluge ima pravo ograničiti ili onemogućiti uporabu sadržaja www.skcvukovar.hr .",
     "paragraph15": "www.skcvukovar.hr može sadržavati i poveznice na druge internet stranice, koje nisu održavane od strane društva. Pružatelj usluge za sadržaj tih stranica ne odgovara."
-  }        
+  },
+  "CookiesToast": {
+    "title1": "Ova stranica koristi kolačiće",
+    "paragraph1": "Koristimo kolačiće za poboljšanje korisničkog iskustva. Više informacija pronađite u našim",
+    "privacy": "Pravila privatnosti",
+    "and": "i",
+    "terms": "Uvjeti korištenja",
+    "paragraph2": "stranicama.",
+    "button1": "Ne slažem se",
+    "button2": "Slažem se"
+  }       
   }

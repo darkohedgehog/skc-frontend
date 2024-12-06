@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from 'next-themes';
 import { NavbarWithChildren } from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
+import CookiesToast from '@/components/cookies/CookiesToast';
 
 export const metadata: Metadata = {
     title: "Srpski kulturni centar",
@@ -43,6 +44,7 @@ export default async function LocaleLayout(props: {
             <div className='relative z-10'>
              <NavbarWithChildren />
                {props.children}
+               <CookiesToast />
               <Footer />
            </div>
           </ThemeProvider>

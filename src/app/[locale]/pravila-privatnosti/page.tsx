@@ -1,9 +1,14 @@
-import React from 'react'
+import CookiesStatement from '@/components/privacy/CookiesStatement';
+import Privacy from '@/components/privacy/Privacy';
+import React from 'react';
 
 const PrivacyPage = () => {
   return (
-    <div>PrivacyPage</div>
+    <>
+     <Privacy />
+     <CookiesStatement />
+    </>
   )
 }
 
-export default PrivacyPage
+export default PrivacyPage;

@@ -1,9 +1,12 @@
-import React from 'react'
+import TermsOfUse from '@/components/terms/TermsOfUse';
+import React from 'react';
 
 const TermsPage = () => {
   return (
-    <div>Terms</div>
+    <>
+     <TermsOfUse />
+    </>
   )
 }
 
-export default TermsPage 
+export default TermsPage;

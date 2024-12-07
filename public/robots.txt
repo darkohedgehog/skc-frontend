@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skcvukovar.hr
+
+# Sitemaps
+Sitemap: https://skcvukovar.hr/sitemap.xml

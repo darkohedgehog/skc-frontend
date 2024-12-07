@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 
-export async function GET(request: { url: string | URL; }, { params }: any) {
+export async function GET(request: NextRequest, { params }: any) {
   const { slug } = params;
-  const { searchParams } = new URL(request.url);
+  const { searchParams } = new URL(request.url); // `request.url` je sada string iz `NextRequest`
   const locale = searchParams.get('locale') || 'sr-Latn';
 
   try {

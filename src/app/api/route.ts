@@ -1,13 +1,14 @@
 import { NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 
-export async function GET(request: { url: string | URL; }) {
-  const { searchParams } = new URL(request.url);
-  const locale = searchParams.get('locale') || 'en';
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url); // `request.url` je string iz `NextRequest`
+  const locale = searchParams.get('locale') || 'sr-Latn';
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs?locale=${locale}&populate=*`, {
       headers: {
-        'Authorization': `Bearer ${process.env.REST_API_KEY}`,
+        Authorization: `Bearer ${process.env.REST_API_KEY}`,
       },
     });
 

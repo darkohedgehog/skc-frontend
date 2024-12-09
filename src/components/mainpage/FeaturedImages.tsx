@@ -163,6 +163,7 @@ export const FeaturedImages = ({
                     onMouseMove={handleMouseMove}
                     height={100}
                     width={100}
+                    priority={false}
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="object-cover object-top h-14 w-14"

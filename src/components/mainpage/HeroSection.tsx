@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-4 justify-start my-4 relative z-10">
             <Link 
                 href={localizedPathContact}>
-            <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
+            <button aria-label='Idi na stranicu kontakt' className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
               <span>{t('button1')}</span>{" "}
               <HiArrowRight className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
             </button>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
           <Link
             href={localizedPathAbout}>
-          <button className="text-gray dark:text-300 text-base font-medium">
+          <button aria-label='Idi na stranicu O nama' className="text-gray dark:text-300 text-base font-medium">
           {t('button2')}
           </button>
           </Link>

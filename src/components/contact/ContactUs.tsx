@@ -50,7 +50,7 @@ const ContactUs = () => {
                   {t('address2')}
                   </p>
                 </div>
-                <div className="border-t border-gray-200 px-6 py-4">
+                <div className="border-t border-gray px-6 py-4">
                   <h3 className="text-lg font-medium text-accent dark:text-darkpurple">
                   {t('worktime')}
                   </h3>
@@ -58,12 +58,12 @@ const ContactUs = () => {
                   {t('time')}
                   </p>
                 </div>
-                <div className="border-t border-gray-200 px-6 py-4">
+                <div className="border-t border-gray px-6 py-4">
                   <h3 className="text-lg font-medium text-accent dark:text-darkpurple">
                   {t('contact')}:
                     </h3>
                   <Link 
-                   href={'mailto:prodaja@zivic-elektro.com'} target='blank'
+                   href={'mailto:direktor@skcvukovar.hr'} target='blank'
                   className="mt-1 text-gray">
                     Email: direktor@skcvukovar.hr
                   </Link>
@@ -84,7 +84,7 @@ const ContactUs = () => {
                   </Link>
                   <Link 
                   className="mx-2 text-blue-500" 
-                  href={'mailto:prodaja@zivic-elektro.com'} target='blank'>
+                  href={'mailto:direktor@skcvukovar.hr'} target='blank'>
                   <MdOutlineAlternateEmail className='h-6 w-6' />
                   </Link>
                 </span>

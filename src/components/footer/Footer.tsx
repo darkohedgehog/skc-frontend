@@ -19,8 +19,7 @@ export default function Footer  ()  {
   const currentLocale = pathSegments[1] || "sr-Latn";
 
   return (
-    <>
-      <footer className="rounded-lg m-4 bottom-0 w-full mx-0">
+<footer className="rounded-lg m-4 bottom-0 w-full mx-0 border-t border-neutral-300 dark:border-gray">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -73,15 +72,15 @@ export default function Footer  ()  {
                 </div>
         <div className="flex items-center justify-center gap-2 my-3 text-sm text-accent sm:text-center dark:text-accentDark"> 
          Powered by 
-         <Link href={'https://nextjs.org/'} target='blank'>
+         <a href={'https://nextjs.org/'} target='blank'>
          <RiNextjsFill className='w-6 h-6' />
-         </Link>
+         </a>
         </div>
         <div className="flex items-center justify-center gap-2 my-6 text-sm text-gray sm:text-center"> 
          Developed by Hedgehog
-         <Link href={'https://www.hedgehogwebdev.com'} target='blank'>
+         <a href={'https://www.hedgehogwebdev.com'} target='blank'>
          <GiHedgehog className='w-6 h-6' />
-         </Link>
+         </a>
         </div>
         <hr className="my-6 border-gray sm:mx-auto lg:my-8" />
         <span className="block text-sm text-accent sm:text-center dark:text-accentDark"> 
@@ -89,14 +88,13 @@ export default function Footer  ()  {
         <Link href={"/"} className="hover:underline">
         </Link> 
         <div className="flex items-center justify-center gap-2 my-6 text-sm text-gray sm:text-center"> 
-         <Link href={'/sitemap.xml'} target='blank'>
+         <a href={'/sitemap.xml'} target='blank'>
             sitemap.xml
-         </Link>
+         </a>
         </div>
         </span>
     </div>
 </footer>
- </>
   );
 };
 

@@ -18,9 +18,9 @@ export default function HeroSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 max-w-7xl mx-auto pt-20 md:pt-40 relative overflow-hidden px-4 md:px-8">
       <div className="flex flex-col items-start">
-        <h1 className="text-3xl md:text-5xl md:leading-tight max-w-5xl text-center lg:text-left tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-800 dark:via-white dark:to-white from-neutral-800 via-neutral-600 to-neutral-600">
+        <h1 className="text-3xl md:text-5xl md:leading-tight max-w-5xl text-center lg:text-left tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-800 dark:via-white dark:to-white from-neutral-600 via-neutral-400 to-neutral-600">
        {t('title1')}
-       <span className="uppercase text-4xl gap-1 flex items-center justify-center lg:justify-start text-accent dark:text-accentDark">
+       <span className="uppercase text-4xl gap-1 flex items-center justify-center lg:justify-start bg-gradient-to-br from-slate-400 to-slate-500 bg-clip-text text-center font-medium tracking-tight text-transparent">
         {t('span')}
         </span>
         </h1>
@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
           <Link
             href={localizedPathAbout}>
-          <button aria-label='Idi na stranicu O nama' className="text-gray dark:text-300 text-base font-medium">
+          <button aria-label='Idi na stranicu O nama' className="text-gray dark:text-neutral-300 text-base font-medium">
           {t('button2')}
           </button>
           </Link>

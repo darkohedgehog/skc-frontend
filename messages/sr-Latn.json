@@ -149,6 +149,14 @@
       "paragraph2": "Posetite nas i postanite deo priče koju gradimo godinama – priče o kulturi, obrazovanju i ljubavi prema pisanoj reči. Biblioteka Zaharija Orfelin je više od zbirke knjiga – to je vaš prozor u svet znanja.",
       "button1": "Kontakt"
     },
+    "AboutUsComponent": {
+      "title": "O nama",
+      "paragraph1": " Na 5. redovnoj sednici Skupštine",
+      "paragraph2": "Zajedničkog veća opština Vukovar",
+      "paragraph3": ", koja je održana 10. novembra 2008. godine donesen je zaključak o prihvatanju inicijative za osnivanje Srpskog kulturnog centra sa sedištem u Vukovaru te je donesena odluka o osnivanju ustanove u oblasti kulture „Srpski kulturni centar“ Vukovar.",
+      "paragraph4": "Ustanova u oblasti kulture „Srpski kulturni centar“ je ustanova koja obavlja delatnost profesionalne kulture za pripadnike srpske nacionalne manjine u Vukovarsko-sremskoj i Osječko-baranjskoj.županiji. U Odluci o osnivanju, između ostalog, stoji da se Ustanova bavi očuvanjem i unapređenjem tradicionalnih, kulturnih i umetničkih izraza područja koje pokriva Ustanova, čuva, razvija i unapređuje sve oblike kulturnog i umetničkog stvaralaštva te zadovoljava sve oblike zabavnih, kulturnih i umetničkih potreba srpske etničke zajednice, utvrđuje potrebe, prikuplja i stručno obrađuje, čuva i obnavlja bibliotečku građu, priprema učenike za prijemne ispite za dodatnu nastavu iz predmeta nacionalnog i verskog sadržaja, selektuje i brine o muzejsko-galerijskoj delatnosti, širi kulturnu baštinu, arhivira građu i brine o čuvanju iste, razvija i unapređuje sve oblike muzičko-scenske kulture i obavlja druge delatnosti iz oblasti kulture.",
+      "paragraph5": " U okviru Ustanove deluje biblioteka „Zaharija Orfelin“ kao i ogranak Vukove zadužbine."
+    },
       "Statut": {
         "loading": "Učitavanje statuta...",
         "available": "Statut nije pronađen.",

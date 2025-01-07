@@ -100,7 +100,8 @@
       "paragraph1": "Arhivska građa predstavlja neprocenjivo blago koje čuva istoriju, kulturu i identitet naših prostora. Naš tim posvećen je prikupljanju, obradi i digitalnoj restauraciji arhivskih materijala, omogućavajući im da traju kroz vekove.",
       "paragraph2": "Pažljivo digitalizujemo stare dokumente, fotografije, rukopise i druge vredne zapise.",
       "button1": "Istraži",
-      "button2": "Kontakt"
+      "button2": "Kontakt",
+      "progress": "Stranica je trenutno u fazi izrade"
     },
     "Blog": {
       "no_blogs": "Trenutno nema blogova.",
@@ -177,7 +178,7 @@
         "biblioteka": "Biblioteka Zaharije Orfelin",
         "address1": "Eugena Kvaternika 1",
         "address2": "32000 Vukovar",
-        "worktime": "Radno vrijeme",
+        "worktime": "Radno vreme",
         "time": "Ponedjeljak - Petak: 08:00h - 16:00h",
         "contact": "Kontakt",
         "phone": "Telefon"

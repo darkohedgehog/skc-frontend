@@ -26,7 +26,7 @@ const Portfolio = () => {
      height={600}
      priority={false}
      className="w-80 h-96 my-10 object-cover object-center rounded-xl shadow-lg shadow-gray dark:shadow-accentDark"/>
-    <div className="text-center lg:w-2/3 w-full mt-10 text-neutral-600 dark:text-gray">
+    <div className="text-center lg:w-2/3 w-full mt-10 text-neutral-600 dark:text-gray text-2xl">
       <p className="mb-8 leading-relaxed">
       {t('paragraph1')}<br /> {t('paragraph2')}
       </p>

@@ -8,7 +8,7 @@
       "latin": "Latinica"
     },
     "useTheme": {
-      "title1": "Svjetla",
+      "title1": "Svetla",
       "title2": "Tamna",
       "title3": "Sistem"
     },
@@ -22,7 +22,7 @@
         "title7": "Biblioteka",
         "title8": "Izvještaji",
         "title9": "Kontakt",
-        "title10": "Biblioteka Zaharije Orfelin",
+        "title10": "Biblioteka Zaharija Orfelin",
         "title11": "Arhivska građa",
         "title12": "Vesti",
         "title13": "Početna",
@@ -48,7 +48,7 @@
     },
     "FeaturedImages": {
       "name1": "Biblioteka",
-      "designation1": "Zaharije Orfelin",
+      "designation1": "Zaharija Orfelin",
       "name2": "Izložbe",
       "designation2": "srpskih umetnika",
       "name3": "Muzika",
@@ -68,7 +68,7 @@
       "title3": "Kultura i umetnost",
       "paragraph2": "Organizacija svih oblika zabavnih, kulturnih i umetničkih potreba srpske etničke zajednice",
       "title4": "Prikupljamo i stručno obrađujemo, čuvamo i obnavljamo bibliotečku građu",
-      "paragraph3": "U okviru Ustanove deluje biblioteka „Zaharije Orfelin“ kao i ogranak Vukove zadužbine",
+      "paragraph3": "U okviru Ustanove deluje biblioteka „Zaharija Orfelin“ kao i ogranak Vukove zadužbine",
       "button": "O nama"
     },
     "BlogSection":{
@@ -80,7 +80,7 @@
     },
     "LibrarySection": {
       "title1": "Biblioteka",
-      "title2": "Zaharije Orfelin",
+      "title2": "Zaharija Orfelin",
       "title3": "Veliki izbor knjiga",
       "paragraph1": "Više od 20.000 naslova koje smo vredno prikupili i ljubomorno ih čuvamo za vas. Obogatite svoje znanje i upoznajte se sa našom kolekcijom...",
       "title4": "Predavanja",
@@ -136,7 +136,7 @@
       "loading" :"Učitavam...molim sačekajte",
       "available":"Nema dostupnog sadržaja",
       "title1": "Biblioteka",
-      "title2": "Zaharije Orfelin",
+      "title2": "Zaharija Orfelin",
       "paragraph": " Više od 20.000 naslova koje smo vredno prikupili i ljubomorno ih čuvamo za vas. Obogatite svoje znanje i upoznajte se sa našom kolekcijom",
       "godina": "Godina",
       "ISBN": "ISBN",
@@ -144,9 +144,9 @@
       "signatura": "Signatura"
     },
     "LibraryIntro": {
-      "title1": "Biblioteka Zaharije Orfelin",
+      "title1": "Biblioteka Zaharija Orfelin",
       "title2": "Riznica znanja i kulture",
-      "paragraph1": "Sa preko 20.000 pažljivo prikupljenih naslova, biblioteka Zaharije Orfelin predstavlja pravo utočište za ljubitelje knjige i istraživače znanja. Naša kolekcija obuhvata bogatstvo literature – od klasičnih dela i savremene beletristike do stručnih i naučnih publikacija.",
+      "paragraph1": "Sa preko 20.000 pažljivo prikupljenih naslova, biblioteka Zaharija Orfelin predstavlja pravo utočište za ljubitelje knjige i istraživače znanja. Naša kolekcija obuhvata bogatstvo literature – od klasičnih dela i savremene beletristike do stručnih i naučnih publikacija.",
       "paragraph2": "Posetite nas i postanite deo priče koju gradimo godinama – priče o kulturi, obrazovanju i ljubavi prema pisanoj reči. Biblioteka Zaharija Orfelin je više od zbirke knjiga – to je vaš prozor u svet znanja.",
       "button1": "Kontakt"
     },
@@ -175,7 +175,7 @@
         "title": "Ostanimo u kontaktu",
         "paragraph": "Naša adresa",
         "skc": "Ustanova u oblasti kulture Srpski kulturni centar Vukovar",
-        "biblioteka": "Biblioteka Zaharije Orfelin",
+        "biblioteka": "Biblioteka Zaharija Orfelin",
         "address1": "Eugena Kvaternika 1",
         "address2": "32000 Vukovar",
         "worktime": "Radno vreme",
@@ -254,7 +254,7 @@
     "paragraph1": "Koristimo kolačiće za poboljšanje korisničkog iskustva. Više informacija pronađite u našim",
     "privacy": "Pravila privatnosti",
     "and": "i",
-    "terms": "Uvjeti korištenja",
+    "terms": "Uslovi korištenja",
     "paragraph2": "stranicama.",
     "button1": "Ne slažem se",
     "button2": "Slažem se"

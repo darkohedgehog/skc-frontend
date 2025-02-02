@@ -29,7 +29,7 @@ const BooksPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState<string>(""); // Drži trenutni termin pretrage
 
-  const booksPerPage = 6;
+  const booksPerPage = 24;
 
   // Ref za sekciju sa knjigama
   const booksSectionRef = useRef<HTMLDivElement | null>(null);

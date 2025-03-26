@@ -6,6 +6,7 @@ import SearchBar from "../header/SearchBar";
 import { useTranslations } from 'next-intl';
 import LibraryIntro from "./LibraryIntro";
 
+
 interface BookType {
   id: number;
   knjigaId: number;

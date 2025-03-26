@@ -143,12 +143,34 @@
       "inventurni_broj": "Inventurni broj",
       "signatura": "Signatura"
     },
+    "Books": {
+      "loading" :"Učitavam...molim sačekajte",
+      "available":"Nema dostupnog sadržaja",
+      "title1": "Biblioteka",
+      "title2": "Zaharija Orfelin",
+      "godina": "Godina",
+      "link": "Više"
+    },
+    "BookDetailsPage": {
+      "loading" :"Učitavam...molim sačekajte",
+      "available":"Nema dostupnog sadržaja",
+      "author": "Autor",
+      "godina": "Godina",
+      "button": "Nazad"
+    },
     "LibraryIntro": {
       "title1": "Biblioteka Zaharija Orfelin",
       "title2": "Riznica znanja i kulture",
-      "paragraph1": "Sa preko 20.000 pažljivo prikupljenih naslova, biblioteka Zaharija Orfelin predstavlja pravo utočište za ljubitelje knjige i istraživače znanja. Naša kolekcija obuhvata bogatstvo literature – od klasičnih dela i savremene beletristike do stručnih i naučnih publikacija.",
-      "paragraph2": "Posetite nas i postanite deo priče koju gradimo godinama – priče o kulturi, obrazovanju i ljubavi prema pisanoj reči. Biblioteka Zaharija Orfelin je više od zbirke knjiga – to je vaš prozor u svet znanja.",
-      "button1": "Kontakt"
+      "title3": "U nastavku možete pretražiti knjige iz naše zbirke",
+      "title4": "Ili ih možete pregledati na linku:",
+      "paragraph1": "Biblioteka “Zaharija Orfelin“ osnovana je 18. aprila 2019. godine i nosi ime srpskog pisca i kaligrafe Zaharije Orfelina, rođenog u Vukovaru.",
+      "paragraph2": "Nalazi se u zgradi Zajedničkog veća opština na adresi Eugena Kvaternika 1, a radno vreme biblioteke je svakim radnim danom od 8 do 15 časova.",
+      "paragraph3": "Članarina iznosi 5 € za odrasle, a dečja i grupna članarina izosi 3 €.",
+      "paragraph4": "U biblioteci možete pronaći veliki broj knjiga na srpskom jeziku i ćiriličnom pismu iz svih oblasti.",
+      "paragraph5": "Očekujemo vaš dolazak!!",
+      "paragraph6": "Vaš Srpski kulturni centar",
+      "button1": "Kontakt",
+      "button2": "Knjige"
     },
     "AboutUsComponent": {
       "title": "O nama",
@@ -179,7 +201,7 @@
         "address1": "Eugena Kvaternika 1",
         "address2": "32000 Vukovar",
         "worktime": "Radno vreme",
-        "time": "Ponedjeljak - Petak: 08:00h - 16:00h",
+        "time": "Ponedeljak - Petak: 08:00h - 16:00h",
         "contact": "Kontakt",
         "phone": "Telefon"
       },

@@ -168,6 +168,22 @@ module.exports = {
         ],
       },
       {
+        loc: '/knjige',
+        changefreq: 'monthly',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+        alternates: [
+          {
+            hreflang: 'sr-Latn',
+            href: `${siteMetadata.siteUrl}/sr-Latn/knjige`,
+          },
+          {
+            hreflang: 'sr-Cyrl',
+            href: `${siteMetadata.siteUrl}/sr-Cyrl/knjige`,
+          },
+        ],
+      },
+      {
         loc: '/pravila-privatnosti',
         changefreq: 'monthly',
         priority: 0.8,

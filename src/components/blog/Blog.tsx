@@ -122,13 +122,14 @@ const Blog = () => {
             </button>
           </div>
         </div>
-        {/* SearchBar */}
-        <SearchBarBlog onSearch={handleSearch} />
       </div>
       <h1 className="flex items-center justify-center mb-8 text-xl lg:text-3xl font-semibold text-accent dark:text-accentDark">
         {t("title")}
       </h1>
-
+       {/* SearchBar */}
+      <div className="flex items-center justify-end my-6">
+          <SearchBarBlog onSearch={handleSearch} /> {/* Prosleđuje funkciju pretrage */}
+        </div>
       <hr className="mb-6 border-gray" />
 
       {/* Blogovi */}

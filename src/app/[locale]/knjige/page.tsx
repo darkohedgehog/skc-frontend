@@ -1,10 +1,10 @@
+import Books from '@/components/library/Books'
+import React from 'react';
 import siteMetadata from '@/app/utils/siteMetaData';
-import Blog from '@/components/blog/Blog'
-import React from 'react'
 
 export async function generateMetadata() {
-  const pageTitle = "Najnovije vijesti";
-  const pageDescription = "Pratite nanovija dešavanja i događaje";
+  const pageTitle = "Biblioteka Zaharija Orfelin";
+  const pageDescription = "Vaša riznica znanja";
 
   return {
     title: pageTitle,
@@ -12,7 +12,7 @@ export async function generateMetadata() {
     openGraph: {
       title: pageTitle,
       description: pageDescription,
-      url: `${siteMetadata.siteUrl}/blog`,
+      url: `${siteMetadata.siteUrl}/knjige`,
       siteName: siteMetadata.title,
       images: [`${siteMetadata.siteUrl}/social-media.png`],
       locale: "sr-Latn",
@@ -25,26 +25,21 @@ export async function generateMetadata() {
       images: [`${siteMetadata.siteUrl}/social-media.png`], 
     },
     alternates: {
-      canonical: `${siteMetadata.siteUrl}/blog`,
+      canonical: `${siteMetadata.siteUrl}/knjige`,
       languages: {
-        'sr-Latn': `${siteMetadata.siteUrl}/sr-Latn/blog`,
-        'sr-Cyrl': `${siteMetadata.siteUrl}/sr-Cyrl/blog`,
+        'sr-Latn': `${siteMetadata.siteUrl}/sr-Latn/knjige`,
+        'sr-Cyrl': `${siteMetadata.siteUrl}/sr-Cyrl/knjige`,
       },
     },    
   };
 }
 
-
-
-
-
-
-const BlogPage = () => {
+const BookPage = () => {
   return (
     <>
-    <Blog />
+      <Books />
     </>
   )
 }
 
-export default BlogPage;
+export default BookPage;

@@ -34,6 +34,10 @@ const nextConfig: NextConfig = {
             protocol: "https",
             hostname: "api.skcvukovar.hr",
           },
+          {
+            protocol: "https",
+            hostname: "www.skcvukovar.hr",
+          },
         ],
       },
 };

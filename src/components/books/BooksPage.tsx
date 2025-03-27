@@ -97,48 +97,6 @@ const BooksPage = () => {
   return (
     <>
       <LibraryIntro />
-      <div ref={booksSectionRef} className="px-10 md:px-20 my-20">
-        <div className="flex items-center justify-end">
-          <SearchBar onSearch={handleSearch} /> {/* Prosleđuje funkciju pretrage */}
-        </div>
-        <h1 className="flex items-center justify-center text-center text-3xl lg:text-4xl font-bold mb-10 text-purple-700 dark:text-accentDark">
-          {t('title1')} <br /> {t('title2')}
-        </h1>
-        <p className="flex items-center justify-center text-clip text-neutral-800 dark:text-gray">
-          {t('paragraph')}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-20">
-          {books.map((book) => (
-            <div
-              key={book.id}
-              className="border rounded-xl p-4 shadow-lg shadow-gray dark:shadow-accentDark bg-white dark:bg-gray"
-            >
-              <h2 className="text-xl font-semibold mb-2 text-purple-700">
-                {book.skupina1}
-              </h2>
-              <p className="text-sm text-neutral-800">
-                <strong>{t('godina')}:</strong> {book.godina || "N/A"}
-              </p>
-              <p className="text-sm text-neutral-800">
-                <strong>{t('ISBN')}:</strong> {book.isbn || "N/A"}
-              </p>
-              <p className="text-sm text-neutral-800">
-                <strong>{t('inventurni_broj')}:</strong> {book.invbroj || "N/A"}
-              </p>
-              <p className="text-sm text-neutral-800">
-                <strong>{t('signatura')}:</strong> {book.signatura || "N/A"}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Pagination */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
-      </div>
     </>
   );
 };

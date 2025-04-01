@@ -151,6 +151,24 @@
       "godina": "Godina",
       "link": "Više"
     },
+    "OurPublication": {
+      "loading" :"Učitavam...molim sačekajte",
+      "available":"Nema dostupnog sadržaja",
+      "title": "Naša izdanja",
+      "paragraph": "Kao deo našeg posvećenog rada, razvijamo i izdavačku delatnost sa ciljem da obogatimo kulturni i obrazovni prostor",
+      "godina": "Godina",
+      "link": "Više",
+      "button": "Istražite"
+    },
+    "OurPublicationAll": {
+      "loading" :"Učitavam...molim sačekajte",
+      "available":"Nema dostupnog sadržaja",
+      "title": "Naša izdanja",
+      "paragraph": "Verujemo u značaj pisane reči, zbog čega se sa posebnom pažnjom bavimo i izdavaštvom knjiga",
+      "godina": "Godina",
+      "link": "Više",
+      "button": "Istražite"
+    },
     "BookDetailsPage": {
       "loading" :"Učitavam...molim sačekajte",
       "available":"Nema dostupnog sadržaja",

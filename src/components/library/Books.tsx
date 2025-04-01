@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import Pagination from "../pagination/Pagination";
@@ -44,67 +44,71 @@ const Books = () => {
   // Ref za sekciju sa knjigama
   const booksSectionRef = useRef<HTMLDivElement | null>(null);
 
-  const fetchBooks = async () => {
+
+  // ✅ Memoizovana funkcija koja neće biti redefinisana na svakom renderu
+  const fetchBooks = useCallback(async () => {
+    setLoading(true); // važno je staviti ovde kako bi loading bio konzistentan
     try {
       const filters = searchQuery
-        ? `&filters[$or][0][title][$containsi]=${encodeURIComponent(searchQuery)}&filters[$or][1][author][$containsi]=${encodeURIComponent(searchQuery)}&filters[$or][2][year][$containsi]=${encodeURIComponent(searchQuery)}`
+        ? `&filters[$or][0][title][$containsi]=${encodeURIComponent(
+            searchQuery
+          )}&filters[$or][1][author][$containsi]=${encodeURIComponent(
+            searchQuery
+          )}&filters[$or][2][year][$containsi]=${encodeURIComponent(
+            searchQuery
+          )}`
         : "";
-  
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/books?locale=${locale}&populate=cover_image&pagination[page]=${currentPage}&pagination[pageSize]=${booksPerPage}&sort=createdAt:desc${filters}`
       );
-  
+
       const data = await res.json();
-  
-      setBooks(data.data.map((item: any) => {
-        return {
+
+      setBooks(
+        data.data.map((item: any) => ({
           id: item.id,
           documentId: item.documentId,
           title: item.title,
           author: item.author,
           description: item.description,
           year: item.year,
-          cover_image: item.cover_image
-        };
-      }));
-  
+          cover_image: item.cover_image,
+        }))
+      );
+
       setTotalPages(data.meta.pagination.pageCount);
     } catch (err) {
       console.error("Greška pri fetchovanju knjiga:", err);
     } finally {
       setLoading(false);
     }
-  };  
+  }, [locale, currentPage, searchQuery, booksPerPage]);
 
   useEffect(() => {
     fetchBooks();
-  }, [locale, currentPage, searchQuery]);
-
-  if (loading) {
-    return <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">
-      {t('loading')}
-    </p>;
-  }
+  }, [fetchBooks]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    setCurrentPage(1); // Resetuje paginaciju na prvu stranu
+    setCurrentPage(1);
   };
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
-
-    // Skroluj do sekcije sa knjigama
     if (booksSectionRef.current) {
       booksSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   if (loading) {
-    return <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">
-      {t('loading')}
-      </p>;
+    return (
+      <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">
+        {t("loading")}
+      </p>
+    );
   }
+
 
   if (books.length === 0) {
     return <p className="text-center text-accent dark:text-accentDark flex items-center justify-center mt-20">

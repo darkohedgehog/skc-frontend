@@ -53,11 +53,11 @@ export default function HeroSection() {
       <div>
         <div className="border border-neutral-200 dark:border-neutral-800 rounded-3xl p-4 bg-neutral-100 dark:bg-neutral-900 shadow-[0px_0px_5px_1px_rgba(0,0,0,0.05)_inset] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.05)_inset]">
           <Image
-            src="/banner.jpg"
+            src="/banner_skc.webp"
             alt="Srpski kulturni centar"
             width={1000}
             height={1000}
-            className="rounded-2xl h-72 w-full"
+            className="rounded-2xl w-full h-auto object-cover"
             priority
           />
         </div>

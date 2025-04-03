@@ -15,11 +15,11 @@ const Logo = () => {
       className="font-normal flex space-x-2 items-center text-sm mr-4 text-black px-2 py-1"
     >
       <Image
-        src="/logo1.jpg"
+        src="/logo-skc.svg"
         alt="logo"
-        width={40}
-        height={40}
-        className="w-10 h-10 rounded-full"
+        width={41}
+        height={41}
+        className="w-11 h-11 rounded-full object-cover"
         priority={false}
       />
     </Link>

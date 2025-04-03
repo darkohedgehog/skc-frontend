@@ -69,6 +69,16 @@ export default async function LocaleLayout(props: {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+       <head>
+      <meta name="google-site-verification" content="dhF1KyQbjqzM2WFcOWwvOFwOW_m2mLq2VVyIavbzqpg" />
+      <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+      <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+      <link rel="icon" href="/android-chrome-192x192.png" type="image/png" sizes="192x192" />
+      <link rel="icon" href="/android-chrome-512x512.png" type="image/png" sizes="512x512" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <meta name="description" content="Čuvamo i unapređujemo tradicionalne, kulturne i umetničke izraze srpske nacionalne manjine" />
+      <title>Srpski kulturni centar Vukovar</title>
+     </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider

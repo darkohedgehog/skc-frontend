@@ -78,20 +78,24 @@ const BlogDetail = () => {
                 </span> 
                {formatDate(blog.published)}
               </p>
+              <div className="flex items-center justify-center w-3/4 h-auto mx-auto flex-col gap-6">
       {thumbnailUrl ? (
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_URL}${thumbnailUrl}`}
           alt={blog.title}
-          width={300}
-          height={200}
+          width={1000}
+          height={1000}
           priority
-          className="rounded-xl object-cover h-96 w-3/4 mx-auto shadow-md shadow-accent"
+          className="rounded-2xl object-cover object-center h-auto md:h-[500px] lg:h-[800px] w-full mx-auto shadow-md shadow-accent"
         />
       ) : (
         <div className="w-full h-[300px] bg-gray-200 rounded-lg"></div>
       )}
-
-      <p className="mt-16 text-neutral-800 dark:text-gray text-lg">{blog.content}</p>
+      <p className="mt-16 text-neutral-800 dark:text-gray text-lg w-full flex items-center justify-center mx-auto">
+        {blog.content}
+      </p>
+         </div>
+      
 
       {blog.gallery && blog.gallery.length > 0 && (
          <div className="mt-8">

@@ -92,7 +92,7 @@ const BlogSection = () => {
               <div key={blog.id}>
                 {imageUrl && (
                   <Image
-                    className="object-cover object-center w-full h-64 rounded-xl shadow-md shadow-gray lg:h-80"
+                    className="object-cover object-center w-full h-64 rounded-xl shadow-md shadow-gray lg:h-96"
                     src={`${process.env.NEXT_PUBLIC_BASE_URL}${imageUrl}`}
                     alt={blog.title}
                     width={500}

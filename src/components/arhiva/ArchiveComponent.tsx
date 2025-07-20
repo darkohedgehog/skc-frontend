@@ -36,13 +36,13 @@ const ArchiveComponent = () => {
       {t('paragraph2')}
       </p>
       <div className="flex justify-center items-center gap-6">
-      <Link 
-            href={"/"} target='blank'>
+      <a
+            href="https://arhiva.skcvukovar.hr/" target='_blank'>
                 <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
               <span>{t('button1')}</span>{" "}
               <FaSearch className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
             </button>
-        </Link>
+        </a>
         <Link 
             href={localizedPathContact}>
                 <button className="flex space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
@@ -53,11 +53,8 @@ const ArchiveComponent = () => {
       </div>
     </div>
   </div>
-  <div className='flex items-center justify-center text-2xl my-16'>
-  {t('progress')}
-    </div>
 </section>
   )
 }
 
-export default ArchiveComponent
+export default ArchiveComponent;

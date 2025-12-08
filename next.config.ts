@@ -1,45 +1,47 @@
-import { NextConfig } from 'next';
+// next.config.ts
 import createNextIntlPlugin from 'next-intl/plugin';
+import type { NextConfig } from 'next';
 
-// Postavljanje next-intl plugina
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   reactStrictMode: true,
-    images: {
-        remotePatterns: [
-          {
-            protocol: "http",
-            hostname: "localhost",
-          },
-          {
-            protocol: "https",
-            hostname: "res.cloudinary.com",
-            pathname: "/dhkmlqg4o/**",
-          },
-          {
-            protocol: "https",
-            hostname: "images.unsplash.com",
-            
-          },
-          {
-            protocol: "https",
-            hostname: "assets.aceternity.com",
-          },
-          {
-            protocol: "https",
-            hostname: "api.microlink.io",
-          },
-          {
-            protocol: "https",
-            hostname: "api.skcvukovar.hr",
-          },
-          {
-            protocol: "https",
-            hostname: "www.skcvukovar.hr",
-          },
-        ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http' as const,
+        hostname: 'localhost',
       },
-};
+      {
+        protocol: 'https' as const,
+        hostname: 'res.cloudinary.com',
+        pathname: '/dhkmlqg4o/**',
+      },
+      {
+        protocol: 'https' as const,
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https' as const,
+        hostname: 'assets.aceternity.com',
+      },
+      {
+        protocol: 'https' as const,
+        hostname: 'api.microlink.io',
+      },
+      {
+        protocol: 'https' as const,
+        hostname: 'api.skcvukovar.hr',
+      },
+      {
+        protocol: 'https' as const,
+        hostname: 'www.skcvukovar.hr',
+      },
+    ],
+
+    // 🔑 Ovo: u dev-u ne koristi Next image proxy
+    unoptimized: process.env.NODE_ENV === 'development',
+  },
+} satisfies NextConfig;
 
 export default withNextIntl(nextConfig);

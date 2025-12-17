@@ -21,6 +21,7 @@ const Logo = () => {
         height={41}
         className="w-11 h-11 rounded-full object-cover"
         priority={false}
+        loading="eager"
       />
     </Link>
   );

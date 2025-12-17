@@ -219,6 +219,10 @@ const MobileNav = ({ navItems }: { navItems: any[] }) => {
 
 const MobileChildNavItems = ({ navItem }: { navItem: any }) => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const t = useTranslations("NavBar");
+  const pathSegments = pathname.split("/");
+  const currentLocale = pathSegments[1] || "sr-Latn";
   return (
     <motion.div className="overflow-hidden">
       <button
@@ -245,6 +249,20 @@ const MobileChildNavItems = ({ navItem }: { navItem: any }) => {
                 <motion.span className="block py-1">{child.name}</motion.span>
               </Link>
             ))}
+            <div className="space-y-3">
+            <ProductItem
+                title={t("title10")}
+                href={`/${currentLocale}/biblioteka`}
+                src="/assets/knjiga.webp"
+                description={t("paragraph1")}
+              />
+              <ProductItem
+                title={t("title11")}
+                href={`/${currentLocale}/arhivska-gradja`}
+                src="/assets/arhiva.webp"
+                description={t("paragraph2")}
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

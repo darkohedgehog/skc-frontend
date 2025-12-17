@@ -117,7 +117,9 @@
       "published":"Објављено",
       "category": "Категорија",
       "language": "Доступно је и на језику",
-      "button": "Назад"
+      "button": "Назад",
+      "gallery": "Галерија",
+      "button1": "Кликни за увећање"
     },
     "SearchBar":{
       "placeholder": "Претражујте садржај",

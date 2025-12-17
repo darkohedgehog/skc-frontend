@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { IoLibraryOutline } from "react-icons/io5";
 import { usePathname } from 'next/navigation';
+import { MdOutlineLocalLibrary } from "react-icons/md";
 
 type Book = {
   id: number;
@@ -79,9 +80,18 @@ const OurPublication = () => {
 
   return (
     <div className="px-10 md:px-20 my-16">
-      <h2 className="flex items-center justify-center pt-10 mt-20 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl mb-20">
-        {t("title")}
-      </h2>
+      {/* Header */}
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center gap-4">
+                  <span className="text-blue-500 dark:text-accentDark">
+                    <MdOutlineLocalLibrary className="h-6 w-6 lg:h-10 lg:w-10" />
+                  </span>
+                  <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-3xl font-medium tracking-tight text-transparent md:text-6xl my-6">
+                    {t("title")}
+                  </h1>
+                </div>
+                <div className="mx-auto h-px w-24 bg-gray opacity-60" />
+              </div>
       <p className="flex items-center justify-center mb-16 text-center text-2xl md:text-4xl text-gray">
         {t("paragraph")}
       </p>

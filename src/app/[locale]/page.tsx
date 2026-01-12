@@ -6,7 +6,7 @@ const AboutSection = dynamic(() => import('@/components/mainpage/AboutSection'))
 const LibrarySection = dynamic(() => import('@/components/mainpage/LibrarySection'));
 const OurPublication = dynamic(() => import('@/components/library/OurPublication'));
 const ArchiveSection = dynamic(() => import('@/components/mainpage/ArchiveSection'));
- 
+
 export default function HomePage() {
  
   return (

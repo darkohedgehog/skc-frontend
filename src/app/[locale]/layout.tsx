@@ -1,6 +1,4 @@
-// app/[locale]/layout.tsx
 import type { ReactNode } from 'react';
-
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -11,7 +9,6 @@ import Footer from '@/components/footer/Footer';
 import CookiesToast from '@/components/cookies/CookiesToast';
 import siteMetadata from '../utils/siteMetaData';
 
-// Metadata za ovaj segment (bez ručnog <head>)
 export const metadata = {
   metadataBase: siteMetadata.siteUrl,
   title: {
@@ -82,7 +79,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   // povlači poruke na osnovu i18n/request.ts
   const messages = await getMessages();
 
-  // ⛔ ovde NEMA <html>, <head>, <body> — to radi root layout
+
   return (
     <NextIntlClientProvider messages={messages}>
       <ThemeProvider

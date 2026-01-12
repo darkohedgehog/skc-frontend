@@ -1,6 +1,5 @@
 import siteMetadata from '@/app/utils/siteMetaData';
 import Blog from '@/components/blog/Blog'
-import React from 'react'
 
 export async function generateMetadata() {
   const pageTitle = "Najnovije vijesti";

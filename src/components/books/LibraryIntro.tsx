@@ -60,13 +60,13 @@ const LibraryIntro = () => {
       {t('title3')}
       </h1>
       <div className="flex justify-center items-center gap-6 my-20">
-        <Link 
-            href={localizedPathKnjige}>
+        <a 
+            href="https://library.foi.hr/lib/index.php?B=1626" target="_blank" rel="noopener noreferrer">
                 <button className="flex mt-4 space-x-2 items-center group bg-gradient-to-b from-indigo-500 to-blue-600 px-4 py-2 rounded-2xl text-white shadow-[0px_3px_0px_0px_rgba(255,255,255,0.1)_inset]">
               <span>{t('button2')}</span>{" "}
               <GiBookmark className="text-white group-hover:translate-x-1 stroke-[1px] h-3 w-3 mt-0.5 transition-transform duration-200" />
             </button>
-        </Link>
+        </a>
       </div>
     </div>
 </section>

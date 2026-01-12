@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { BlogType } from "../../../types";
 import Pagination from "../pagination/Pagination";
-import SearchBarBlog from "../header/SearchBarBlog";
 import { FiCalendar } from "react-icons/fi";
 
 const Blog = () => {
@@ -93,11 +92,6 @@ const Blog = () => {
     );
   }
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    setCurrentPage(1);
-  };
-
   return (
     <div className="px-10 md:px-20 my-10">
       <div className="flex items-center justify-between">
@@ -127,10 +121,6 @@ const Blog = () => {
       <h1 className="flex items-center justify-center mb-8 text-xl lg:text-3xl font-semibold text-accent dark:text-accentDark">
         {t("title")}
       </h1>
-
-      <div className="flex items-center justify-end my-6">
-        <SearchBarBlog onSearch={handleSearch} />
-      </div>
 
       <hr className="mb-6 border-gray" />
 

@@ -40,6 +40,9 @@ const ContactUs = () => {
                   <p className="mt-1 text-gray">
                   {t('address2')}
                   </p>
+                  <p className="mt-1 text-gray">
+                  {t('phone')}: +385 32 353-585
+                    </p>
                   <p className="mt-1 text-blue-500">
                   {t('biblioteka')}
                   </p>
@@ -49,6 +52,9 @@ const ContactUs = () => {
                   <p className="mt-1 text-gray">
                   {t('address2')}
                   </p>
+                  <p className="mt-1 text-gray">
+                  {t('phone')}: +385 32 353-586
+                    </p>
                 </div>
                 <div className="border-t border-gray px-6 py-4">
                   <h3 className="text-lg font-medium text-accent dark:text-darkpurple">
@@ -68,7 +74,7 @@ const ContactUs = () => {
                     Email: direktor@skcvukovar.hr
                   </Link>
                   <p className="mt-1 text-gray">
-                  {t('phone')}: +385 32 541-992
+                  {t('phone')}: +385 32 353-585
                     </p>
                 </div>
                 <span className="inline-flex mx-4">
